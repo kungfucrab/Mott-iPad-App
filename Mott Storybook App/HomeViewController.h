@@ -11,5 +11,3 @@
 @interface HomeViewController : UIViewController
 
 @end
-
-//comment for a test commit

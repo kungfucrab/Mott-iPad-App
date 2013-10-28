@@ -21,6 +21,10 @@
 		CC55080517FFBAF800D7E884 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC5507E717FFBAF700D7E884 /* UIKit.framework */; };
 		CC55080D17FFBAF800D7E884 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CC55080B17FFBAF800D7E884 /* InfoPlist.strings */; };
 		CC55080F17FFBAF800D7E884 /* Mott_Storybook_AppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC55080E17FFBAF800D7E884 /* Mott_Storybook_AppTests.m */; };
+		CCBE13B0181ECCDC00A15DAF /* ObjectToFind.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBE13AF181ECCDC00A15DAF /* ObjectToFind.m */; };
+		CCBE13B3181ECDEE00A15DAF /* SearchGamePage.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBE13B2181ECDEE00A15DAF /* SearchGamePage.m */; };
+		CCBE13B6181ECF9B00A15DAF /* FullImagePage.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBE13B5181ECF9B00A15DAF /* FullImagePage.m */; };
+		CCBE13B9181ED00500A15DAF /* TimeTravelPage.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBE13B8181ED00500A15DAF /* TimeTravelPage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,14 +49,22 @@
 		CC5507F217FFBAF700D7E884 /* HomeAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeAppDelegate.h; sourceTree = "<group>"; };
 		CC5507F317FFBAF700D7E884 /* HomeAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeAppDelegate.m; sourceTree = "<group>"; };
 		CC5507F617FFBAF700D7E884 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		CC5507F817FFBAF700D7E884 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
-		CC5507F917FFBAF700D7E884 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		CC5507F817FFBAF700D7E884 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HomeViewController.h; path = "Mott Storybook App/HomeViewController.h"; sourceTree = "<group>"; };
+		CC5507F917FFBAF700D7E884 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = HomeViewController.m; path = "Mott Storybook App/HomeViewController.m"; sourceTree = "<group>"; };
 		CC5507FB17FFBAF700D7E884 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CC55080117FFBAF800D7E884 /* Mott Storybook AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mott Storybook AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC55080217FFBAF800D7E884 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		CC55080A17FFBAF800D7E884 /* Mott Storybook AppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Mott Storybook AppTests-Info.plist"; sourceTree = "<group>"; };
 		CC55080C17FFBAF800D7E884 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CC55080E17FFBAF800D7E884 /* Mott_Storybook_AppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Mott_Storybook_AppTests.m; sourceTree = "<group>"; };
+		CCBE13AE181ECCDC00A15DAF /* ObjectToFind.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectToFind.h; sourceTree = "<group>"; };
+		CCBE13AF181ECCDC00A15DAF /* ObjectToFind.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectToFind.m; sourceTree = "<group>"; };
+		CCBE13B1181ECDEE00A15DAF /* SearchGamePage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchGamePage.h; sourceTree = "<group>"; };
+		CCBE13B2181ECDEE00A15DAF /* SearchGamePage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchGamePage.m; sourceTree = "<group>"; };
+		CCBE13B4181ECF9B00A15DAF /* FullImagePage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullImagePage.h; sourceTree = "<group>"; };
+		CCBE13B5181ECF9B00A15DAF /* FullImagePage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullImagePage.m; sourceTree = "<group>"; };
+		CCBE13B7181ED00500A15DAF /* TimeTravelPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeTravelPage.h; sourceTree = "<group>"; };
+		CCBE13B8181ED00500A15DAF /* TimeTravelPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeTravelPage.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +94,10 @@
 		CC5507D717FFBAF700D7E884 = {
 			isa = PBXGroup;
 			children = (
+				CCBE13BB181ED0D500A15DAF /* PageIndexer */,
+				CCBE13BA181ED0B800A15DAF /* Images */,
+				CCBE13AD181ECC9C00A15DAF /* Structures */,
+				CCBE13AC181ECC7D00A15DAF /* Main Page */,
 				CC5507E917FFBAF700D7E884 /* Mott Storybook App */,
 				CC55080817FFBAF800D7E884 /* Mott Storybook AppTests */,
 				CC5507E217FFBAF700D7E884 /* Frameworks */,
@@ -115,8 +131,6 @@
 				CC5507F217FFBAF700D7E884 /* HomeAppDelegate.h */,
 				CC5507F317FFBAF700D7E884 /* HomeAppDelegate.m */,
 				CC5507F517FFBAF700D7E884 /* Main.storyboard */,
-				CC5507F817FFBAF700D7E884 /* HomeViewController.h */,
-				CC5507F917FFBAF700D7E884 /* HomeViewController.m */,
 				CC5507FB17FFBAF700D7E884 /* Images.xcassets */,
 				CC5507EA17FFBAF700D7E884 /* Supporting Files */,
 			);
@@ -150,6 +164,44 @@
 				CC55080B17FFBAF800D7E884 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CCBE13AC181ECC7D00A15DAF /* Main Page */ = {
+			isa = PBXGroup;
+			children = (
+				CC5507F817FFBAF700D7E884 /* HomeViewController.h */,
+				CC5507F917FFBAF700D7E884 /* HomeViewController.m */,
+			);
+			name = "Main Page";
+			sourceTree = "<group>";
+		};
+		CCBE13AD181ECC9C00A15DAF /* Structures */ = {
+			isa = PBXGroup;
+			children = (
+				CCBE13B4181ECF9B00A15DAF /* FullImagePage.h */,
+				CCBE13B5181ECF9B00A15DAF /* FullImagePage.m */,
+				CCBE13B7181ED00500A15DAF /* TimeTravelPage.h */,
+				CCBE13B8181ED00500A15DAF /* TimeTravelPage.m */,
+				CCBE13B1181ECDEE00A15DAF /* SearchGamePage.h */,
+				CCBE13B2181ECDEE00A15DAF /* SearchGamePage.m */,
+				CCBE13AE181ECCDC00A15DAF /* ObjectToFind.h */,
+				CCBE13AF181ECCDC00A15DAF /* ObjectToFind.m */,
+			);
+			name = Structures;
+			sourceTree = "<group>";
+		};
+		CCBE13BA181ED0B800A15DAF /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		CCBE13BB181ED0D500A15DAF /* PageIndexer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = PageIndexer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,9 +302,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCBE13B0181ECCDC00A15DAF /* ObjectToFind.m in Sources */,
+				CCBE13B9181ED00500A15DAF /* TimeTravelPage.m in Sources */,
 				CC5507F017FFBAF700D7E884 /* main.m in Sources */,
 				CC5507F417FFBAF700D7E884 /* HomeAppDelegate.m in Sources */,
 				CC5507FA17FFBAF700D7E884 /* HomeViewController.m in Sources */,
+				CCBE13B3181ECDEE00A15DAF /* SearchGamePage.m in Sources */,
+				CCBE13B6181ECF9B00A15DAF /* FullImagePage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,6 +519,7 @@
 				CC55081417FFBAF800D7E884 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CC55081517FFBAF800D7E884 /* Build configuration list for PBXNativeTarget "Mott Storybook AppTests" */ = {
 			isa = XCConfigurationList;
@@ -471,6 +528,7 @@
 				CC55081717FFBAF800D7E884 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

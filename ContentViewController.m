@@ -30,6 +30,8 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    
+    self.view.backgroundColor = [UIColor greenColor];
     [_webView loadHTMLString:_dataObject
                      baseURL:[NSURL URLWithString:@""]];
 }

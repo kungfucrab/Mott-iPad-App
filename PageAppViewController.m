@@ -14,31 +14,26 @@
 
 @implementation PageAppViewController
 
-- (ContentViewController *)viewControllerAtIndex:(NSUInteger)index
+- (UIViewController *)viewControllerAtIndex:(NSUInteger)index
 {
     // Return the data view controller for the given index.
     if (([self.pageContent count] == 0) ||
             (index >= [self.pageContent count])) {
         return nil;
     }
-    // Create a new view controller and pass suitable data.
-    /*
-    ContentViewController *dataViewController =
-    [[ContentViewController alloc] init]; 
-    */
     
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     
-    ContentViewController *dataViewController = [storyboard instantiateViewControllerWithIdentifier:@"contentView"];
-    
-    dataViewController.dataObject = _pageContent[index];
-    
-    return dataViewController;
-}
-
-- (NSUInteger)indexOfViewController:(ContentViewController *)viewController
-{
-    return [_pageContent indexOfObject:viewController.dataObject];
+    if (index == 2) {
+        BluePage *dataViewController = [storyboard instantiateViewControllerWithIdentifier:@"BluePage"];
+        dataViewController.dataObject = _pageContent[index];
+        return ((UIViewController*)dataViewController);
+    }
+    else {
+        ContentViewController *dataViewController = [storyboard instantiateViewControllerWithIdentifier:@"contentView"];
+        dataViewController.dataObject = _pageContent[index];
+        return ((UIViewController*)dataViewController);
+    }
 }
 
 //loads the content into the array we will iterate over
@@ -54,15 +49,12 @@
     [websites addObject:@"more stuff"];
     
     _pageContent = [[NSArray alloc] initWithArray:websites];
-    
-
 }
 
 //preps previous page
 - (UIViewController *)pageViewController: (UIPageViewController *)pageViewController viewControllerBeforeViewController: (UIViewController *)viewController
 {
-    NSUInteger index = [self indexOfViewController:
-        (ContentViewController *)viewController];
+    NSUInteger index = [_pageContent indexOfObject:((ContentViewController *)viewController).dataObject];
     
     if ((index == 0) || (index == NSNotFound)) {
         return nil;
@@ -77,7 +69,7 @@
 - (UIViewController *)pageViewController:
 (UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController
 {
-    NSUInteger index = [self indexOfViewController: (ContentViewController *)viewController];
+    NSUInteger index = [_pageContent indexOfObject:((ContentViewController *)viewController).dataObject];
     
     if (index == NSNotFound) {
         return nil;
@@ -112,7 +104,7 @@
     
     //Index that it will initially start at, use this for chapters and set with a variable of some sort
     //this also sets up the current page we are planning to look at
-    ContentViewController *initialViewController = [self viewControllerAtIndex:0];
+    UIViewController *initialViewController = [self viewControllerAtIndex:0];
     
     NSArray *viewControllers = [NSArray arrayWithObject:initialViewController];
     

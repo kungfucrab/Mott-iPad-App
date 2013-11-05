@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "ContentViewController.h"
+#import "BluePage.h"
 
 @interface PageAppViewController : UIViewController
 <UIPageViewControllerDataSource>

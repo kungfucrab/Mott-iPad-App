@@ -52,7 +52,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jyM-nH-LJg">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <rect key="frame" x="265" y="221" width="554" height="269"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
@@ -79,7 +79,27 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dWh-WT-GYl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1432" y="-915"/>
+            <point key="canvasLocation" x="688" y="-1091"/>
+        </scene>
+        <!--Blue Page-->
+        <scene sceneID="CXm-BB-wdb">
+            <objects>
+                <viewController storyboardIdentifier="BluePage" useStoryboardIdentifierAsRestorationIdentifier="YES" id="33F-Eo-BWc" customClass="BluePage" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="G5B-oT-rVl"/>
+                        <viewControllerLayoutGuide type="bottom" id="c4b-h9-imu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oLI-ns-2tN">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IQd-Rt-yjX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2143" y="-1091"/>
         </scene>
         <!--Page App View Controller-->
         <scene sceneID="iCS-th-6e2">

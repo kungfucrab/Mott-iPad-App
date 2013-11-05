@@ -27,6 +27,7 @@
 		CCBE13B3181ECDEE00A15DAF /* SearchGamePage.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBE13B2181ECDEE00A15DAF /* SearchGamePage.m */; };
 		CCBE13B6181ECF9B00A15DAF /* FullImagePage.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBE13B5181ECF9B00A15DAF /* FullImagePage.m */; };
 		CCBE13B9181ED00500A15DAF /* TimeTravelPage.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBE13B8181ED00500A15DAF /* TimeTravelPage.m */; };
+		CCF1E3D61828AACA005CA983 /* BluePage.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF1E3D51828AACA005CA983 /* BluePage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,8 @@
 		CCBE13B5181ECF9B00A15DAF /* FullImagePage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullImagePage.m; sourceTree = "<group>"; };
 		CCBE13B7181ED00500A15DAF /* TimeTravelPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeTravelPage.h; sourceTree = "<group>"; };
 		CCBE13B8181ED00500A15DAF /* TimeTravelPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeTravelPage.m; sourceTree = "<group>"; };
+		CCF1E3D41828AACA005CA983 /* BluePage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BluePage.h; sourceTree = "<group>"; };
+		CCF1E3D51828AACA005CA983 /* BluePage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BluePage.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +219,8 @@
 			children = (
 				CC3D5B34182899A700AA4C64 /* ContentViewController.h */,
 				CC3D5B35182899A700AA4C64 /* ContentViewController.m */,
+				CCF1E3D41828AACA005CA983 /* BluePage.h */,
+				CCF1E3D51828AACA005CA983 /* BluePage.m */,
 				CC3D5B3718289B1600AA4C64 /* PageAppViewController.h */,
 				CC3D5B3818289B1600AA4C64 /* PageAppViewController.m */,
 			);
@@ -322,6 +327,7 @@
 			files = (
 				CCBE13B0181ECCDC00A15DAF /* ObjectToFind.m in Sources */,
 				CC3D5B36182899A700AA4C64 /* ContentViewController.m in Sources */,
+				CCF1E3D61828AACA005CA983 /* BluePage.m in Sources */,
 				CCBE13B9181ED00500A15DAF /* TimeTravelPage.m in Sources */,
 				CC3D5B3918289B1600AA4C64 /* PageAppViewController.m in Sources */,
 				CC5507F017FFBAF700D7E884 /* main.m in Sources */,

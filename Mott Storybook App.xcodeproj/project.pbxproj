@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC3D5B36182899A700AA4C64 /* ContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3D5B35182899A700AA4C64 /* ContentViewController.m */; };
+		CC3D5B3918289B1600AA4C64 /* PageAppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3D5B3818289B1600AA4C64 /* PageAppViewController.m */; };
 		CC5507E417FFBAF700D7E884 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC5507E317FFBAF700D7E884 /* Foundation.framework */; };
 		CC5507E617FFBAF700D7E884 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC5507E517FFBAF700D7E884 /* CoreGraphics.framework */; };
 		CC5507E817FFBAF700D7E884 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC5507E717FFBAF700D7E884 /* UIKit.framework */; };
@@ -38,6 +40,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CC3D5B34182899A700AA4C64 /* ContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentViewController.h; sourceTree = "<group>"; };
+		CC3D5B35182899A700AA4C64 /* ContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentViewController.m; sourceTree = "<group>"; };
+		CC3D5B3718289B1600AA4C64 /* PageAppViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageAppViewController.h; sourceTree = "<group>"; };
+		CC3D5B3818289B1600AA4C64 /* PageAppViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageAppViewController.m; sourceTree = "<group>"; };
 		CC5507E017FFBAF700D7E884 /* Mott Storybook App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mott Storybook App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC5507E317FFBAF700D7E884 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CC5507E517FFBAF700D7E884 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -94,6 +100,7 @@
 		CC5507D717FFBAF700D7E884 = {
 			isa = PBXGroup;
 			children = (
+				CCF1E3D318289E72005CA983 /* StoryBook */,
 				CCBE13BB181ED0D500A15DAF /* PageIndexer */,
 				CCBE13BA181ED0B800A15DAF /* Images */,
 				CCBE13AD181ECC9C00A15DAF /* Structures */,
@@ -204,6 +211,17 @@
 			name = PageIndexer;
 			sourceTree = "<group>";
 		};
+		CCF1E3D318289E72005CA983 /* StoryBook */ = {
+			isa = PBXGroup;
+			children = (
+				CC3D5B34182899A700AA4C64 /* ContentViewController.h */,
+				CC3D5B35182899A700AA4C64 /* ContentViewController.m */,
+				CC3D5B3718289B1600AA4C64 /* PageAppViewController.h */,
+				CC3D5B3818289B1600AA4C64 /* PageAppViewController.m */,
+			);
+			name = StoryBook;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -303,7 +321,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCBE13B0181ECCDC00A15DAF /* ObjectToFind.m in Sources */,
+				CC3D5B36182899A700AA4C64 /* ContentViewController.m in Sources */,
 				CCBE13B9181ED00500A15DAF /* TimeTravelPage.m in Sources */,
+				CC3D5B3918289B1600AA4C64 /* PageAppViewController.m in Sources */,
 				CC5507F017FFBAF700D7E884 /* main.m in Sources */,
 				CC5507F417FFBAF700D7E884 /* HomeAppDelegate.m in Sources */,
 				CC5507FA17FFBAF700D7E884 /* HomeViewController.m in Sources */,

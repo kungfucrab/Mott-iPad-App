@@ -89,37 +89,37 @@ NSMutableArray *pageNames;
 
 + (TimeTravelPage *)getTimeTravelPage {
     TimeTravelPage *page = [[TimeTravelPage alloc] init];
-    //fill in data for page
+    page.image = @"timetravel.png";
     return page;
 }
 
 + (FullImagePage *)getIntroPage {
     FullImagePage *page = [[FullImagePage alloc] init];
-    //fill in the data for page
+    page.image = @"IntroPage.png";
     return page;
 }
 
 + (SearchGamePage *)getDinoPage1Game {
     SearchGamePage *page = [[SearchGamePage alloc] init];
-    //fill in data for page
+    page.image = @"DinoPage1Game.png";
     return page;
 }
 
 + (FullImagePage *)getDinoPage2 {
     FullImagePage *page = [[FullImagePage alloc] init];
-    //fill in data for page
+    page.image = @"DinoPage2.png";
     return page;
 }
 
 + (SearchGamePage *)getDinoPage3Game {
     SearchGamePage *page = [[SearchGamePage alloc] init];
-    //fill in data for page
+    page.image = @"DinoPage3Game.png";
     return page;
 }
 
 + (FullImagePage *)getFinalPage {
     FullImagePage *page = [[FullImagePage alloc] init];
-    //fill in data
+    page.image = @"FinalPage.png";
     return page;
 }
 

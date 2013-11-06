@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		CC3D5B36182899A700AA4C64 /* ContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3D5B35182899A700AA4C64 /* ContentViewController.m */; };
 		CC3D5B3918289B1600AA4C64 /* PageAppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3D5B3818289B1600AA4C64 /* PageAppViewController.m */; };
+		CC51571B182ACEC600BB66A8 /* DinoPage1Game.png in Resources */ = {isa = PBXBuildFile; fileRef = CC515715182ACEC600BB66A8 /* DinoPage1Game.png */; };
+		CC51571C182ACEC600BB66A8 /* DinoPage2.png in Resources */ = {isa = PBXBuildFile; fileRef = CC515716182ACEC600BB66A8 /* DinoPage2.png */; };
+		CC51571D182ACEC600BB66A8 /* DinoPage3Game.png in Resources */ = {isa = PBXBuildFile; fileRef = CC515717182ACEC600BB66A8 /* DinoPage3Game.png */; };
+		CC51571E182ACEC600BB66A8 /* FinalPage.png in Resources */ = {isa = PBXBuildFile; fileRef = CC515718182ACEC600BB66A8 /* FinalPage.png */; };
+		CC51571F182ACEC600BB66A8 /* IntroPage.png in Resources */ = {isa = PBXBuildFile; fileRef = CC515719182ACEC600BB66A8 /* IntroPage.png */; };
+		CC515720182ACEC600BB66A8 /* timetravel.png in Resources */ = {isa = PBXBuildFile; fileRef = CC51571A182ACEC600BB66A8 /* timetravel.png */; };
 		CC5507E417FFBAF700D7E884 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC5507E317FFBAF700D7E884 /* Foundation.framework */; };
 		CC5507E617FFBAF700D7E884 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC5507E517FFBAF700D7E884 /* CoreGraphics.framework */; };
 		CC5507E817FFBAF700D7E884 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC5507E717FFBAF700D7E884 /* UIKit.framework */; };
@@ -46,6 +52,12 @@
 		CC3D5B35182899A700AA4C64 /* ContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentViewController.m; sourceTree = "<group>"; };
 		CC3D5B3718289B1600AA4C64 /* PageAppViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageAppViewController.h; sourceTree = "<group>"; };
 		CC3D5B3818289B1600AA4C64 /* PageAppViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageAppViewController.m; sourceTree = "<group>"; };
+		CC515715182ACEC600BB66A8 /* DinoPage1Game.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DinoPage1Game.png; sourceTree = "<group>"; };
+		CC515716182ACEC600BB66A8 /* DinoPage2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DinoPage2.png; sourceTree = "<group>"; };
+		CC515717182ACEC600BB66A8 /* DinoPage3Game.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DinoPage3Game.png; sourceTree = "<group>"; };
+		CC515718182ACEC600BB66A8 /* FinalPage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FinalPage.png; sourceTree = "<group>"; };
+		CC515719182ACEC600BB66A8 /* IntroPage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IntroPage.png; sourceTree = "<group>"; };
+		CC51571A182ACEC600BB66A8 /* timetravel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = timetravel.png; sourceTree = "<group>"; };
 		CC5507E017FFBAF700D7E884 /* Mott Storybook App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mott Storybook App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC5507E317FFBAF700D7E884 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CC5507E517FFBAF700D7E884 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -108,8 +120,7 @@
 			children = (
 				CCA5A41A1829C2C000B223D8 /* PageContentHelper */,
 				CCF1E3D318289E72005CA983 /* StoryBook */,
-				CCBE13BB181ED0D500A15DAF /* PageIndexer */,
-				CCBE13BA181ED0B800A15DAF /* Images */,
+				CCBE13BA181ED0B800A15DAF /* TestImages */,
 				CCBE13AD181ECC9C00A15DAF /* Structures */,
 				CCBE13AC181ECC7D00A15DAF /* Main Page */,
 				CC5507E917FFBAF700D7E884 /* Mott Storybook App */,
@@ -213,18 +224,17 @@
 			name = Structures;
 			sourceTree = "<group>";
 		};
-		CCBE13BA181ED0B800A15DAF /* Images */ = {
+		CCBE13BA181ED0B800A15DAF /* TestImages */ = {
 			isa = PBXGroup;
 			children = (
+				CC515715182ACEC600BB66A8 /* DinoPage1Game.png */,
+				CC515716182ACEC600BB66A8 /* DinoPage2.png */,
+				CC515717182ACEC600BB66A8 /* DinoPage3Game.png */,
+				CC515718182ACEC600BB66A8 /* FinalPage.png */,
+				CC515719182ACEC600BB66A8 /* IntroPage.png */,
+				CC51571A182ACEC600BB66A8 /* timetravel.png */,
 			);
-			name = Images;
-			sourceTree = "<group>";
-		};
-		CCBE13BB181ED0D500A15DAF /* PageIndexer */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = PageIndexer;
+			name = TestImages;
 			sourceTree = "<group>";
 		};
 		CCF1E3D318289E72005CA983 /* StoryBook */ = {
@@ -318,7 +328,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC5507FC17FFBAF700D7E884 /* Images.xcassets in Resources */,
+				CC51571F182ACEC600BB66A8 /* IntroPage.png in Resources */,
 				CC5507EE17FFBAF700D7E884 /* InfoPlist.strings in Resources */,
+				CC51571B182ACEC600BB66A8 /* DinoPage1Game.png in Resources */,
+				CC51571E182ACEC600BB66A8 /* FinalPage.png in Resources */,
+				CC515720182ACEC600BB66A8 /* timetravel.png in Resources */,
+				CC51571C182ACEC600BB66A8 /* DinoPage2.png in Resources */,
+				CC51571D182ACEC600BB66A8 /* DinoPage3Game.png in Resources */,
 				CC5507F717FFBAF700D7E884 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -24,13 +24,23 @@
     
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     
-    if (index == 2) {
-        BluePage *dataViewController = [storyboard instantiateViewControllerWithIdentifier:@"BluePage"];
+    NSMutableDictionary *currentPage = [[NSMutableDictionary alloc] init];
+    currentPage = [self.helper getPageDataAtIndex:index];
+    NSString *dataType = [currentPage objectForKey:@"type"];
+    
+    if ([dataType isEqualToString:@"TimeTravelPage"]) {
+        TimeTravelPageView *dataViewController = [storyboard instantiateViewControllerWithIdentifier:@"TimeTravelPageView"];
+        dataViewController.dataObject = _pageContent[index];
+        return ((UIViewController*)dataViewController);
+    }
+    else if ([dataType isEqualToString:@"FullImagePage"]){
+        EntireImagePageView *dataViewController = [storyboard instantiateViewControllerWithIdentifier:@"EntireImagePageView"];
         dataViewController.dataObject = _pageContent[index];
         return ((UIViewController*)dataViewController);
     }
     else {
-        ContentViewController *dataViewController = [storyboard instantiateViewControllerWithIdentifier:@"contentView"];
+        //GamePageView
+        GamePageView *dataViewController = [storyboard instantiateViewControllerWithIdentifier:@"GamePageView"];
         dataViewController.dataObject = _pageContent[index];
         return ((UIViewController*)dataViewController);
     }
@@ -55,7 +65,7 @@
 //preps previous page
 - (UIViewController *)pageViewController: (UIPageViewController *)pageViewController viewControllerBeforeViewController: (UIViewController *)viewController
 {
-    NSUInteger index = [_pageContent indexOfObject:((ContentViewController *)viewController).dataObject];
+    NSUInteger index = [_pageContent indexOfObject:((GamePageView *)viewController).dataObject];
     
     if ((index == 0) || (index == NSNotFound)) {
         return nil;
@@ -70,7 +80,7 @@
 - (UIViewController *)pageViewController:
 (UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController
 {
-    NSUInteger index = [_pageContent indexOfObject:((ContentViewController *)viewController).dataObject];
+    NSUInteger index = [_pageContent indexOfObject:((GamePageView *)viewController).dataObject];
     
     if (index == NSNotFound) {
         return nil;

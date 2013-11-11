@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ContentViewController.h"
-#import "BluePage.h"
+#import "TimeTravelPageView.h"
+#import "GamePageView.h"
+#import "EntireImagePageView.h"
+
 #import "PageContentHelper.h"
 
 @interface PageAppViewController : UIViewController

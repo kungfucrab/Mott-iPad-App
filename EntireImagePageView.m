@@ -1,18 +1,18 @@
 //
-//  EntireImageView.m
+//  EntireImagePageView.m
 //  Mott Storybook App
 //
 //  Created by Sebastian Martinez on 11/10/13.
 //  Copyright (c) 2013 Sebastian Martinez. All rights reserved.
 //
 
-#import "EntireImageView.h"
+#import "EntireImagePageView.h"
 
-@interface EntireImageView ()
+@interface EntireImagePageView ()
 
 @end
 
-@implementation EntireImageView
+@implementation EntireImagePageView
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,7 +27,7 @@
 {
     [super viewWillAppear:animated];
     
-    self.view.backgroundColor = [UIColor greenColor];
+    self.view.backgroundColor = [UIColor orangeColor];
 }
 
 - (void)viewDidLoad

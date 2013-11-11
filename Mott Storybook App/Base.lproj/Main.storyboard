@@ -39,65 +39,6 @@
             </objects>
             <point key="canvasLocation" x="-993" y="-154"/>
         </scene>
-        <!--Content View Controller-->
-        <scene sceneID="dHq-sw-nKa">
-            <objects>
-                <viewController restorationIdentifier="contentView" storyboardIdentifier="contentView" id="ItY-ee-gzC" customClass="ContentViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="xI9-qM-7uZ"/>
-                        <viewControllerLayoutGuide type="bottom" id="n0K-BK-0SS"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Fuy-8Q-0dl">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jyM-nH-LJg">
-                                <rect key="frame" x="265" y="221" width="554" height="269"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </webView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdt-bX-3HU">
-                                <rect key="frame" x="109" y="628" width="109" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
-                                <state key="normal" title="HOME">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    </view>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <connections>
-                        <outlet property="webView" destination="jyM-nH-LJg" id="r5S-QV-lXK"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dWh-WT-GYl" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-408" y="-1383"/>
-        </scene>
-        <!--Blue Page-->
-        <scene sceneID="CXm-BB-wdb">
-            <objects>
-                <viewController storyboardIdentifier="BluePage" useStoryboardIdentifierAsRestorationIdentifier="YES" id="33F-Eo-BWc" customClass="BluePage" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="G5B-oT-rVl"/>
-                        <viewControllerLayoutGuide type="bottom" id="c4b-h9-imu"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="oLI-ns-2tN">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    </view>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="IQd-Rt-yjX" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1047" y="-1383"/>
-        </scene>
         <!--Time Travel Page View-->
         <scene sceneID="vG4-XA-sid">
             <objects>
@@ -118,10 +59,10 @@
             </objects>
             <point key="canvasLocation" x="2458" y="-1891"/>
         </scene>
-        <!--Entire Image View-->
+        <!--Entire Image Page View-->
         <scene sceneID="9pf-br-WTQ">
             <objects>
-                <viewController storyboardIdentifier="EntireImageView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="IWv-HY-aSS" customClass="EntireImageView" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EntireImagePageView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="IWv-HY-aSS" customClass="EntireImagePageView" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nHd-Od-oDr"/>
                         <viewControllerLayoutGuide type="bottom" id="2nd-mU-Q4s"/>

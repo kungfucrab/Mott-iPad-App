@@ -1,5 +1,5 @@
 //
-//  EntireImageView.h
+//  EntireImagePageView.h
 //  Mott Storybook App
 //
 //  Created by Sebastian Martinez on 11/10/13.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EntireImageView : UIViewController
+@interface EntireImagePageView : UIViewController
 
 @property (strong, nonatomic) id dataObject;
 

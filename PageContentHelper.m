@@ -42,7 +42,7 @@ NSMutableArray *pageNames;
     return [pageNames count];
 }
 
-- (NSDictionary *)getPageDataAtIndex:(int)index {
+- (NSMutableDictionary *)getPageDataAtIndex:(int)index {
     NSString *currentString = [pageNames objectAtIndex:index];
     NSMutableDictionary *payload = [[NSMutableDictionary alloc] init];
     

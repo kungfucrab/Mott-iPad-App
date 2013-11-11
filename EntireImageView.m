@@ -23,6 +23,13 @@
     return self;
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    self.view.backgroundColor = [UIColor greenColor];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];

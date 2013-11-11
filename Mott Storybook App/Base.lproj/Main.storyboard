@@ -98,10 +98,10 @@
             </objects>
             <point key="canvasLocation" x="1047" y="-1383"/>
         </scene>
-        <!--View Controller-->
+        <!--Time Travel Page View-->
         <scene sceneID="vG4-XA-sid">
             <objects>
-                <viewController id="m0L-bu-ESE" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TimeTravelPageView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="m0L-bu-ESE" customClass="TimeTravelPageView" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ln4-rE-PYo"/>
                         <viewControllerLayoutGuide type="bottom" id="SSX-CP-M2G"/>
@@ -118,10 +118,10 @@
             </objects>
             <point key="canvasLocation" x="2458" y="-1891"/>
         </scene>
-        <!--View Controller-->
+        <!--Entire Image View-->
         <scene sceneID="9pf-br-WTQ">
             <objects>
-                <viewController id="IWv-HY-aSS" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EntireImageView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="IWv-HY-aSS" customClass="EntireImageView" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nHd-Od-oDr"/>
                         <viewControllerLayoutGuide type="bottom" id="2nd-mU-Q4s"/>
@@ -138,10 +138,10 @@
             </objects>
             <point key="canvasLocation" x="2458" y="-903"/>
         </scene>
-        <!--View Controller-->
+        <!--Game Page View-->
         <scene sceneID="GMN-Mh-rn2">
             <objects>
-                <viewController id="oI7-2h-AvI" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GamePageView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="oI7-2h-AvI" customClass="GamePageView" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NMx-Jm-Fhm"/>
                         <viewControllerLayoutGuide type="bottom" id="Tob-P1-XWn"/>

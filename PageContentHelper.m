@@ -38,11 +38,11 @@ NSMutableArray *pageNames;
     return self;
 }
 
-+ (int)getNumberOfPages {
+- (int)getNumberOfPages {
     return [pageNames count];
 }
 
-+ (NSDictionary *)getPageDataAtIndex:(int)index {
+- (NSDictionary *)getPageDataAtIndex:(int)index {
     NSString *currentString = [pageNames objectAtIndex:index];
     NSMutableDictionary *payload = [[NSMutableDictionary alloc] init];
     
@@ -87,37 +87,37 @@ NSMutableArray *pageNames;
     return payload;
 }
 
-+ (TimeTravelPage *)getTimeTravelPage {
+- (TimeTravelPage *)getTimeTravelPage {
     TimeTravelPage *page = [[TimeTravelPage alloc] init];
     page.image = @"timetravel.png";
     return page;
 }
 
-+ (FullImagePage *)getIntroPage {
+- (FullImagePage *)getIntroPage {
     FullImagePage *page = [[FullImagePage alloc] init];
     page.image = @"IntroPage.png";
     return page;
 }
 
-+ (SearchGamePage *)getDinoPage1Game {
+- (SearchGamePage *)getDinoPage1Game {
     SearchGamePage *page = [[SearchGamePage alloc] init];
     page.image = @"DinoPage1Game.png";
     return page;
 }
 
-+ (FullImagePage *)getDinoPage2 {
+- (FullImagePage *)getDinoPage2 {
     FullImagePage *page = [[FullImagePage alloc] init];
     page.image = @"DinoPage2.png";
     return page;
 }
 
-+ (SearchGamePage *)getDinoPage3Game {
+- (SearchGamePage *)getDinoPage3Game {
     SearchGamePage *page = [[SearchGamePage alloc] init];
     page.image = @"DinoPage3Game.png";
     return page;
 }
 
-+ (FullImagePage *)getFinalPage {
+- (FullImagePage *)getFinalPage {
     FullImagePage *page = [[FullImagePage alloc] init];
     page.image = @"FinalPage.png";
     return page;

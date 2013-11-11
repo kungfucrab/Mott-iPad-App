@@ -10,7 +10,7 @@
 
 @interface PageContentHelper : NSObject
 
-+ (NSMutableArray *)getPageDataAtIndex:(int)index;
-+ (int)getNumberOfPages;
+- (NSMutableArray *)getPageDataAtIndex:(int)index;
+- (int)getNumberOfPages;
 
 @end

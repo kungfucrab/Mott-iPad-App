@@ -40,15 +40,16 @@
 //in our case just use int indexs to be passed into a funciton that will call the data we need
 - (void) createContentPages
 {
-    NSMutableArray *websites = [[NSMutableArray alloc] init];
+    NSMutableArray *pageList = [[NSMutableArray alloc] init];
     
-    [websites addObject:@"walrus"];
-    [websites addObject:@"dogs"];
-    [websites addObject:@"legos"];
-    [websites addObject:@"snakes"];
-    [websites addObject:@"more stuff"];
+    int count = [self.helper getNumberOfPages];
     
-    _pageContent = [[NSArray alloc] initWithArray:websites];
+    for (int i = 0; i < count; i++) {
+        NSString *intString = [NSString stringWithFormat:@"%d", i];
+        [pageList addObject:intString];
+    }
+    
+    _pageContent = [[NSArray alloc] initWithArray:pageList];
 }
 
 //preps previous page
@@ -86,6 +87,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.helper = [[PageContentHelper alloc] init];
 	
     // Do any additional setup after loading the view, typically from a nib.
     

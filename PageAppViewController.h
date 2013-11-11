@@ -9,10 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "ContentViewController.h"
 #import "BluePage.h"
+#import "PageContentHelper.h"
 
 @interface PageAppViewController : UIViewController
 <UIPageViewControllerDataSource>
 
 @property (strong, nonatomic) UIPageViewController *pageController;
 @property (strong, nonatomic) NSArray *pageContent;
+@property(strong, nonatomic) PageContentHelper *helper;
 @end

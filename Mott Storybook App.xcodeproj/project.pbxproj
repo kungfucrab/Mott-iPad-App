@@ -34,6 +34,9 @@
 		CCBE13B3181ECDEE00A15DAF /* SearchGamePage.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBE13B2181ECDEE00A15DAF /* SearchGamePage.m */; };
 		CCBE13B6181ECF9B00A15DAF /* FullImagePage.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBE13B5181ECF9B00A15DAF /* FullImagePage.m */; };
 		CCBE13B9181ED00500A15DAF /* TimeTravelPage.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBE13B8181ED00500A15DAF /* TimeTravelPage.m */; };
+		CCBFDF35183056C300F40E27 /* GamePageView.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBFDF34183056C300F40E27 /* GamePageView.m */; };
+		CCBFDF38183056D900F40E27 /* EntireImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBFDF37183056D900F40E27 /* EntireImageView.m */; };
+		CCBFDF3B183057DE00F40E27 /* TimeTravelPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBFDF3A183057DE00F40E27 /* TimeTravelPageView.m */; };
 		CCF1E3D61828AACA005CA983 /* BluePage.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF1E3D51828AACA005CA983 /* BluePage.m */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +90,12 @@
 		CCBE13B5181ECF9B00A15DAF /* FullImagePage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullImagePage.m; sourceTree = "<group>"; };
 		CCBE13B7181ED00500A15DAF /* TimeTravelPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeTravelPage.h; sourceTree = "<group>"; };
 		CCBE13B8181ED00500A15DAF /* TimeTravelPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeTravelPage.m; sourceTree = "<group>"; };
+		CCBFDF33183056C300F40E27 /* GamePageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GamePageView.h; sourceTree = "<group>"; };
+		CCBFDF34183056C300F40E27 /* GamePageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GamePageView.m; sourceTree = "<group>"; };
+		CCBFDF36183056D900F40E27 /* EntireImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntireImageView.h; sourceTree = "<group>"; };
+		CCBFDF37183056D900F40E27 /* EntireImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntireImageView.m; sourceTree = "<group>"; };
+		CCBFDF39183057DE00F40E27 /* TimeTravelPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeTravelPageView.h; sourceTree = "<group>"; };
+		CCBFDF3A183057DE00F40E27 /* TimeTravelPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeTravelPageView.m; sourceTree = "<group>"; };
 		CCF1E3D41828AACA005CA983 /* BluePage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BluePage.h; sourceTree = "<group>"; };
 		CCF1E3D51828AACA005CA983 /* BluePage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BluePage.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -118,6 +127,12 @@
 		CC5507D717FFBAF700D7E884 = {
 			isa = PBXGroup;
 			children = (
+				CCBFDF39183057DE00F40E27 /* TimeTravelPageView.h */,
+				CCBFDF3A183057DE00F40E27 /* TimeTravelPageView.m */,
+				CCBFDF36183056D900F40E27 /* EntireImageView.h */,
+				CCBFDF37183056D900F40E27 /* EntireImageView.m */,
+				CCBFDF33183056C300F40E27 /* GamePageView.h */,
+				CCBFDF34183056C300F40E27 /* GamePageView.m */,
 				CCA5A41A1829C2C000B223D8 /* PageContentHelper */,
 				CCF1E3D318289E72005CA983 /* StoryBook */,
 				CCBE13BA181ED0B800A15DAF /* TestImages */,
@@ -358,9 +373,12 @@
 				CC3D5B36182899A700AA4C64 /* ContentViewController.m in Sources */,
 				CCF1E3D61828AACA005CA983 /* BluePage.m in Sources */,
 				CCBE13B9181ED00500A15DAF /* TimeTravelPage.m in Sources */,
+				CCBFDF38183056D900F40E27 /* EntireImageView.m in Sources */,
 				CCA5A41918299CA300B223D8 /* PageContentHelper.m in Sources */,
+				CCBFDF3B183057DE00F40E27 /* TimeTravelPageView.m in Sources */,
 				CC3D5B3918289B1600AA4C64 /* PageAppViewController.m in Sources */,
 				CC5507F017FFBAF700D7E884 /* main.m in Sources */,
+				CCBFDF35183056C300F40E27 /* GamePageView.m in Sources */,
 				CC5507F417FFBAF700D7E884 /* HomeAppDelegate.m in Sources */,
 				CC5507FA17FFBAF700D7E884 /* HomeViewController.m in Sources */,
 				CCBE13B3181ECDEE00A15DAF /* SearchGamePage.m in Sources */,

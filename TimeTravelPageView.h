@@ -7,9 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TimeTravelPage.h"
 
-@interface TimeTravelPageView : UIViewController
+@interface TimeTravelPageView : UIViewController {
+    IBOutlet UIImageView *entireImageView;
+}
 
 @property (strong, nonatomic) id dataObject;
+@property (strong, nonatomic) TimeTravelPage *pageData;
+@property (strong, nonatomic) UIImageView *entireImageView;
 
 @end

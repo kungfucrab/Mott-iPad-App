@@ -30,17 +30,23 @@
     
     if ([dataType isEqualToString:@"TimeTravelPage"]) {
         TimeTravelPageView *dataViewController = [storyboard instantiateViewControllerWithIdentifier:@"TimeTravelPageView"];
+        TimeTravelPage *pageData = [currentPage objectForKey:@"data"];
+        dataViewController.pageData = pageData;
         dataViewController.dataObject = _pageContent[index];
         return ((UIViewController*)dataViewController);
     }
     else if ([dataType isEqualToString:@"FullImagePage"]){
         EntireImagePageView *dataViewController = [storyboard instantiateViewControllerWithIdentifier:@"EntireImagePageView"];
+        FullImagePage *pageData = [currentPage objectForKey:@"data"];
+        dataViewController.pageData = pageData;
         dataViewController.dataObject = _pageContent[index];
         return ((UIViewController*)dataViewController);
     }
     else {
         //GamePageView
         GamePageView *dataViewController = [storyboard instantiateViewControllerWithIdentifier:@"GamePageView"];
+        SearchGamePage *pageData = [currentPage objectForKey:@"data"];
+        dataViewController.pageData = pageData;
         dataViewController.dataObject = _pageContent[index];
         return ((UIViewController*)dataViewController);
     }

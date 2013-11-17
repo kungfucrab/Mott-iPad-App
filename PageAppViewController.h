@@ -10,6 +10,7 @@
 #import "TimeTravelPageView.h"
 #import "GamePageView.h"
 #import "EntireImagePageView.h"
+#import "FullImagePage.h"
 
 #import "PageContentHelper.h"
 

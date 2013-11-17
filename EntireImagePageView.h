@@ -7,9 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FullImagePage.h"
 
-@interface EntireImagePageView : UIViewController
+@interface EntireImagePageView : UIViewController {
+    IBOutlet UIImageView *entireImageView;
+}
 
 @property (strong, nonatomic) id dataObject;
+@property (strong, nonatomic) FullImagePage *pageData;
+@property (strong, nonatomic) UIImageView *entireImageView;
 
 @end

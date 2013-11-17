@@ -7,9 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SearchGamePage.h"
 
-@interface GamePageView : UIViewController
+@interface GamePageView : UIViewController {
+    IBOutlet UIImageView *entireImageView;
+}
 
 @property (strong, nonatomic) id dataObject;
+@property (strong, nonatomic) SearchGamePage *pageData;
+@property(strong, nonatomic) UIImageView *entireImageView;
+
 
 @end

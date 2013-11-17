@@ -14,6 +14,8 @@
 
 @implementation EntireImagePageView
 
+@synthesize entireImageView;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -27,7 +29,8 @@
 {
     [super viewWillAppear:animated];
     
-    self.view.backgroundColor = [UIColor orangeColor];
+    UIImage *image = [UIImage imageNamed: self.pageData.image];
+    [entireImageView setImage:image];
 }
 
 - (void)viewDidLoad

@@ -311,6 +311,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Sebastian Martinez";
 				TargetAttributes = {
+					CC5507DF17FFBAF700D7E884 = {
+						DevelopmentTeam = T8KZZH4KS6;
+					};
 					CC55080017FFBAF800D7E884 = {
 						TestTargetID = CC5507DF17FFBAF700D7E884;
 					};
@@ -507,10 +510,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Mott Storybook App/Mott Storybook App-Prefix.pch";
 				INFOPLIST_FILE = "Mott Storybook App/Mott Storybook App-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -520,10 +526,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Mott Storybook App/Mott Storybook App-Prefix.pch";
 				INFOPLIST_FILE = "Mott Storybook App/Mott Storybook App-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

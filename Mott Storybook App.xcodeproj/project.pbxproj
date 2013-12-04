@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC1794A1184FC752008B17F5 /* cow.png in Resources */ = {isa = PBXBuildFile; fileRef = CC179496184FC752008B17F5 /* cow.png */; };
+		CC1794A2184FC752008B17F5 /* elephant.png in Resources */ = {isa = PBXBuildFile; fileRef = CC179497184FC752008B17F5 /* elephant.png */; };
+		CC1794A3184FC752008B17F5 /* swiss_cheese.png in Resources */ = {isa = PBXBuildFile; fileRef = CC179498184FC752008B17F5 /* swiss_cheese.png */; };
+		CC1794A4184FC752008B17F5 /* tigerbutt.png in Resources */ = {isa = PBXBuildFile; fileRef = CC179499184FC752008B17F5 /* tigerbutt.png */; };
+		CC1794A5184FC752008B17F5 /* toothpaste.png in Resources */ = {isa = PBXBuildFile; fileRef = CC17949A184FC752008B17F5 /* toothpaste.png */; };
+		CC1794A6184FC752008B17F5 /* whale.png in Resources */ = {isa = PBXBuildFile; fileRef = CC17949B184FC752008B17F5 /* whale.png */; };
+		CC1794A7184FC752008B17F5 /* fries.png in Resources */ = {isa = PBXBuildFile; fileRef = CC17949C184FC752008B17F5 /* fries.png */; };
+		CC1794A8184FC752008B17F5 /* meteor.png in Resources */ = {isa = PBXBuildFile; fileRef = CC17949D184FC752008B17F5 /* meteor.png */; };
+		CC1794A9184FC752008B17F5 /* rabbit.png in Resources */ = {isa = PBXBuildFile; fileRef = CC17949E184FC752008B17F5 /* rabbit.png */; };
+		CC1794AA184FC752008B17F5 /* rocket.png in Resources */ = {isa = PBXBuildFile; fileRef = CC17949F184FC752008B17F5 /* rocket.png */; };
+		CC1794AB184FC752008B17F5 /* Space_FinalDrawing.png in Resources */ = {isa = PBXBuildFile; fileRef = CC1794A0184FC752008B17F5 /* Space_FinalDrawing.png */; };
 		CC3D5B3918289B1600AA4C64 /* PageAppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3D5B3818289B1600AA4C64 /* PageAppViewController.m */; };
 		CC51571B182ACEC600BB66A8 /* DinoPage1Game.png in Resources */ = {isa = PBXBuildFile; fileRef = CC515715182ACEC600BB66A8 /* DinoPage1Game.png */; };
 		CC51571C182ACEC600BB66A8 /* DinoPage2.png in Resources */ = {isa = PBXBuildFile; fileRef = CC515716182ACEC600BB66A8 /* DinoPage2.png */; };
@@ -49,6 +60,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CC179496184FC752008B17F5 /* cow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cow.png; sourceTree = "<group>"; };
+		CC179497184FC752008B17F5 /* elephant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = elephant.png; sourceTree = "<group>"; };
+		CC179498184FC752008B17F5 /* swiss_cheese.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swiss_cheese.png; sourceTree = "<group>"; };
+		CC179499184FC752008B17F5 /* tigerbutt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tigerbutt.png; sourceTree = "<group>"; };
+		CC17949A184FC752008B17F5 /* toothpaste.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = toothpaste.png; sourceTree = "<group>"; };
+		CC17949B184FC752008B17F5 /* whale.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whale.png; sourceTree = "<group>"; };
+		CC17949C184FC752008B17F5 /* fries.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fries.png; sourceTree = "<group>"; };
+		CC17949D184FC752008B17F5 /* meteor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = meteor.png; sourceTree = "<group>"; };
+		CC17949E184FC752008B17F5 /* rabbit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rabbit.png; sourceTree = "<group>"; };
+		CC17949F184FC752008B17F5 /* rocket.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rocket.png; sourceTree = "<group>"; };
+		CC1794A0184FC752008B17F5 /* Space_FinalDrawing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Space_FinalDrawing.png; sourceTree = "<group>"; };
 		CC3D5B3718289B1600AA4C64 /* PageAppViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageAppViewController.h; sourceTree = "<group>"; };
 		CC3D5B3818289B1600AA4C64 /* PageAppViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageAppViewController.m; sourceTree = "<group>"; };
 		CC515715182ACEC600BB66A8 /* DinoPage1Game.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DinoPage1Game.png; sourceTree = "<group>"; };
@@ -118,6 +140,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CC179495184FC72C008B17F5 /* SpaceExample */ = {
+			isa = PBXGroup;
+			children = (
+				CC179496184FC752008B17F5 /* cow.png */,
+				CC179497184FC752008B17F5 /* elephant.png */,
+				CC179498184FC752008B17F5 /* swiss_cheese.png */,
+				CC179499184FC752008B17F5 /* tigerbutt.png */,
+				CC17949A184FC752008B17F5 /* toothpaste.png */,
+				CC17949B184FC752008B17F5 /* whale.png */,
+				CC17949C184FC752008B17F5 /* fries.png */,
+				CC17949D184FC752008B17F5 /* meteor.png */,
+				CC17949E184FC752008B17F5 /* rabbit.png */,
+				CC17949F184FC752008B17F5 /* rocket.png */,
+				CC1794A0184FC752008B17F5 /* Space_FinalDrawing.png */,
+			);
+			name = SpaceExample;
+			sourceTree = "<group>";
+		};
 		CC5507D717FFBAF700D7E884 = {
 			isa = PBXGroup;
 			children = (
@@ -230,6 +270,7 @@
 		CCBE13BA181ED0B800A15DAF /* TestImages */ = {
 			isa = PBXGroup;
 			children = (
+				CC179495184FC72C008B17F5 /* SpaceExample */,
 				CC515715182ACEC600BB66A8 /* DinoPage1Game.png */,
 				CC515716182ACEC600BB66A8 /* DinoPage2.png */,
 				CC515717182ACEC600BB66A8 /* DinoPage3Game.png */,
@@ -343,15 +384,26 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC1794A5184FC752008B17F5 /* toothpaste.png in Resources */,
+				CC1794A4184FC752008B17F5 /* tigerbutt.png in Resources */,
+				CC1794A3184FC752008B17F5 /* swiss_cheese.png in Resources */,
 				CC5507FC17FFBAF700D7E884 /* Images.xcassets in Resources */,
 				CC51571F182ACEC600BB66A8 /* IntroPage.png in Resources */,
+				CC1794A9184FC752008B17F5 /* rabbit.png in Resources */,
+				CC1794A7184FC752008B17F5 /* fries.png in Resources */,
+				CC1794A6184FC752008B17F5 /* whale.png in Resources */,
+				CC1794A8184FC752008B17F5 /* meteor.png in Resources */,
 				CC5507EE17FFBAF700D7E884 /* InfoPlist.strings in Resources */,
+				CC1794A2184FC752008B17F5 /* elephant.png in Resources */,
 				CC51571B182ACEC600BB66A8 /* DinoPage1Game.png in Resources */,
 				CC51571E182ACEC600BB66A8 /* FinalPage.png in Resources */,
 				CC515720182ACEC600BB66A8 /* timetravel.png in Resources */,
 				CC51571C182ACEC600BB66A8 /* DinoPage2.png in Resources */,
 				CC51571D182ACEC600BB66A8 /* DinoPage3Game.png in Resources */,
 				CC5507F717FFBAF700D7E884 /* Main.storyboard in Resources */,
+				CC1794AA184FC752008B17F5 /* rocket.png in Resources */,
+				CC1794AB184FC752008B17F5 /* Space_FinalDrawing.png in Resources */,
+				CC1794A1184FC752008B17F5 /* cow.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

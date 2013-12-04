@@ -101,7 +101,7 @@ NSMutableArray *pageNames;
 
 - (SearchGamePage *)getDinoPage1Game {
     SearchGamePage *page = [[SearchGamePage alloc] init];
-    page.image = @"DinoPage1Game.png";
+    page.image = @"Space_FinalDrawing.png";
     return page;
 }
 
@@ -113,7 +113,7 @@ NSMutableArray *pageNames;
 
 - (SearchGamePage *)getDinoPage3Game {
     SearchGamePage *page = [[SearchGamePage alloc] init];
-    page.image = @"DinoPage3Game.png";
+    page.image = @"Space_FinalDrawing.png";
     return page;
 }
 

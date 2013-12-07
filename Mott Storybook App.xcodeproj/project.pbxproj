@@ -50,6 +50,7 @@
 		CCEBCB0B1852E240006B6668 /* CreditUnion.m in Sources */ = {isa = PBXBuildFile; fileRef = CCEBCB0A1852E240006B6668 /* CreditUnion.m */; };
 		CCEBCB0E1852E345006B6668 /* CreditMott.m in Sources */ = {isa = PBXBuildFile; fileRef = CCEBCB0D1852E345006B6668 /* CreditMott.m */; };
 		CCEBCB111852E373006B6668 /* CreditTeam.m in Sources */ = {isa = PBXBuildFile; fileRef = CCEBCB101852E373006B6668 /* CreditTeam.m */; };
+		CCEBCB151852E577006B6668 /* chapters.m in Sources */ = {isa = PBXBuildFile; fileRef = CCEBCB141852E577006B6668 /* chapters.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +124,8 @@
 		CCEBCB0D1852E345006B6668 /* CreditMott.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreditMott.m; sourceTree = "<group>"; };
 		CCEBCB0F1852E373006B6668 /* CreditTeam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreditTeam.h; sourceTree = "<group>"; };
 		CCEBCB101852E373006B6668 /* CreditTeam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreditTeam.m; sourceTree = "<group>"; };
+		CCEBCB131852E577006B6668 /* chapters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chapters.h; sourceTree = "<group>"; };
+		CCEBCB141852E577006B6668 /* chapters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = chapters.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +173,7 @@
 		CC5507D717FFBAF700D7E884 = {
 			isa = PBXGroup;
 			children = (
+				CCEBCB121852E563006B6668 /* Chapters */,
 				CCEBCB081852E213006B6668 /* Credit Pages */,
 				CCA5A41A1829C2C000B223D8 /* PageContentHelper */,
 				CCF1E3D318289E72005CA983 /* StoryBook */,
@@ -317,6 +321,15 @@
 			name = "Credit Pages";
 			sourceTree = "<group>";
 		};
+		CCEBCB121852E563006B6668 /* Chapters */ = {
+			isa = PBXGroup;
+			children = (
+				CCEBCB131852E577006B6668 /* chapters.h */,
+				CCEBCB141852E577006B6668 /* chapters.m */,
+			);
+			name = Chapters;
+			sourceTree = "<group>";
+		};
 		CCF1E3D318289E72005CA983 /* StoryBook */ = {
 			isa = PBXGroup;
 			children = (
@@ -460,6 +473,7 @@
 				CCBE13B3181ECDEE00A15DAF /* SearchGamePage.m in Sources */,
 				CCEBCB0E1852E345006B6668 /* CreditMott.m in Sources */,
 				CCBE13B6181ECF9B00A15DAF /* FullImagePage.m in Sources */,
+				CCEBCB151852E577006B6668 /* chapters.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

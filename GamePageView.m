@@ -43,7 +43,7 @@ UIButton *findObjectButton1, *findObjectButton2, *findObjectButton3;
     objectsToFind = [[NSMutableArray alloc] init];
     objectsToFind = [NSMutableArray arrayWithArray:self.pageData.objectsToFind];
     
-    [self setupNewGameObjects];
+    [self gameReset];
 }
 
 - (void)viewDidLoad

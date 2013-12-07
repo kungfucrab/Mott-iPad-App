@@ -38,6 +38,9 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="MCC-hH-d8Q" kind="modal" id="Fyl-y6-zIV"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8NY-Uh-egr">
                                 <rect key="frame" x="117" y="576" width="227" height="164"/>
@@ -119,7 +122,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SRn-nZ-sYl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-909" y="432"/>
+            <point key="canvasLocation" x="-2609" y="568"/>
         </scene>
         <!--Credit Union-->
         <scene sceneID="czk-xB-bQL">
@@ -152,7 +155,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yGm-bs-AmB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2220" y="416"/>
+            <point key="canvasLocation" x="-3920" y="552"/>
         </scene>
         <!--Time Travel Page View-->
         <scene sceneID="QLe-Dg-Crq">
@@ -188,6 +191,9 @@
                                 <state key="normal" title="Chapters">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="MCC-hH-d8Q" kind="modal" id="Vj3-t4-Zjd"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -225,6 +231,9 @@
                                 <state key="normal" title="Home">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="modal" id="353-jm-l2H"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8pl-M7-Nnj">
                                 <rect key="frame" x="20" y="706" width="105" height="42"/>
@@ -233,6 +242,9 @@
                                 <state key="normal" title="Chapters">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="MCC-hH-d8Q" kind="modal" id="Opw-eE-OAL"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -304,6 +316,9 @@
                                 <state key="normal" title="Chapters">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="MCC-hH-d8Q" kind="modal" id="lEv-uT-deh"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -341,6 +356,39 @@
             </objects>
             <point key="canvasLocation" x="666" y="-790"/>
         </scene>
+        <!--Chapters-->
+        <scene sceneID="0zR-mW-gww">
+            <objects>
+                <viewController storyboardIdentifier="chapters" useStoryboardIdentifierAsRestorationIdentifier="YES" id="MCC-hH-d8Q" customClass="chapters" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WMI-qa-gie"/>
+                        <viewControllerLayoutGuide type="bottom" id="gYB-Il-QiP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cfU-O7-3Ze">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e0S-lM-VRW">
+                                <rect key="frame" x="20" y="20" width="150" height="79"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Home">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="modal" id="0vh-OR-GEv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L8R-Em-san" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="656" y="514"/>
+        </scene>
         <!--Credit Team-->
         <scene sceneID="mRX-9A-BLi">
             <objects>
@@ -372,7 +420,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zEz-AY-twB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="560" y="438"/>
+            <point key="canvasLocation" x="-1140" y="574"/>
         </scene>
         <!--Entire Image Page View-->
         <scene sceneID="Yyi-Qh-2Iv">
@@ -397,9 +445,6 @@
                                 <state key="normal" title="Home">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="modal" id="6o7-aF-7ym"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="50D-wX-9bc">
                                 <rect key="frame" x="20" y="706" width="105" height="42"/>
@@ -429,6 +474,7 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="k10-59-x9H"/>
+        <segue reference="Isk-Um-BQK"/>
+        <segue reference="Vj3-t4-Zjd"/>
     </inferredMetricsTieBreakers>
 </document>

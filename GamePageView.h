@@ -8,14 +8,28 @@
 
 #import <UIKit/UIKit.h>
 #import "SearchGamePage.h"
+#import "ObjectToFind.h"
 
 @interface GamePageView : UIViewController {
     IBOutlet UIImageView *entireImageView;
+    IBOutlet UIImageView *findObject1View;
+    IBOutlet UIImageView *findObject2View;
+    IBOutlet UIImageView *findObject3View;
+    
+    NSMutableArray *objectsToFind;
 }
 
 @property (strong, nonatomic) id dataObject;
 @property (strong, nonatomic) SearchGamePage *pageData;
 @property(strong, nonatomic) UIImageView *entireImageView;
+@property(strong, nonatomic) UIImageView *findObject1View;
+@property(strong, nonatomic) UIImageView *findObject2View;
+@property(strong, nonatomic) UIImageView *findObject3View;
+@property(strong, nonatomic) NSMutableArray *objectsToFind;
 
+-(IBAction)findObject1ButtonAction:(id)sender;
+-(IBAction)findObject2ButtonAction:(id)sender;
+-(IBAction)findObject3ButtonAction:(id)sender;
+-(IBAction)resetButton:(id)sender;
 
 @end

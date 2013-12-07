@@ -47,6 +47,9 @@
 		CCBFDF35183056C300F40E27 /* GamePageView.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBFDF34183056C300F40E27 /* GamePageView.m */; };
 		CCBFDF3B183057DE00F40E27 /* TimeTravelPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBFDF3A183057DE00F40E27 /* TimeTravelPageView.m */; };
 		CCBFDF3E1830790F00F40E27 /* EntireImagePageView.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBFDF3D1830790F00F40E27 /* EntireImagePageView.m */; };
+		CCEBCB0B1852E240006B6668 /* CreditUnion.m in Sources */ = {isa = PBXBuildFile; fileRef = CCEBCB0A1852E240006B6668 /* CreditUnion.m */; };
+		CCEBCB0E1852E345006B6668 /* CreditMott.m in Sources */ = {isa = PBXBuildFile; fileRef = CCEBCB0D1852E345006B6668 /* CreditMott.m */; };
+		CCEBCB111852E373006B6668 /* CreditTeam.m in Sources */ = {isa = PBXBuildFile; fileRef = CCEBCB101852E373006B6668 /* CreditTeam.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +117,12 @@
 		CCBFDF3A183057DE00F40E27 /* TimeTravelPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeTravelPageView.m; sourceTree = "<group>"; };
 		CCBFDF3C1830790F00F40E27 /* EntireImagePageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntireImagePageView.h; sourceTree = "<group>"; };
 		CCBFDF3D1830790F00F40E27 /* EntireImagePageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntireImagePageView.m; sourceTree = "<group>"; };
+		CCEBCB091852E240006B6668 /* CreditUnion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreditUnion.h; sourceTree = "<group>"; };
+		CCEBCB0A1852E240006B6668 /* CreditUnion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreditUnion.m; sourceTree = "<group>"; };
+		CCEBCB0C1852E345006B6668 /* CreditMott.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreditMott.h; sourceTree = "<group>"; };
+		CCEBCB0D1852E345006B6668 /* CreditMott.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreditMott.m; sourceTree = "<group>"; };
+		CCEBCB0F1852E373006B6668 /* CreditTeam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreditTeam.h; sourceTree = "<group>"; };
+		CCEBCB101852E373006B6668 /* CreditTeam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreditTeam.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +170,7 @@
 		CC5507D717FFBAF700D7E884 = {
 			isa = PBXGroup;
 			children = (
+				CCEBCB081852E213006B6668 /* Credit Pages */,
 				CCA5A41A1829C2C000B223D8 /* PageContentHelper */,
 				CCF1E3D318289E72005CA983 /* StoryBook */,
 				CCBE13BA181ED0B800A15DAF /* TestImages */,
@@ -292,6 +302,19 @@
 				CCBFDF34183056C300F40E27 /* GamePageView.m */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		CCEBCB081852E213006B6668 /* Credit Pages */ = {
+			isa = PBXGroup;
+			children = (
+				CCEBCB0C1852E345006B6668 /* CreditMott.h */,
+				CCEBCB0D1852E345006B6668 /* CreditMott.m */,
+				CCEBCB091852E240006B6668 /* CreditUnion.h */,
+				CCEBCB0A1852E240006B6668 /* CreditUnion.m */,
+				CCEBCB0F1852E373006B6668 /* CreditTeam.h */,
+				CCEBCB101852E373006B6668 /* CreditTeam.m */,
+			);
+			name = "Credit Pages";
 			sourceTree = "<group>";
 		};
 		CCF1E3D318289E72005CA983 /* StoryBook */ = {
@@ -427,12 +450,15 @@
 				CCBFDF3E1830790F00F40E27 /* EntireImagePageView.m in Sources */,
 				CCA5A41918299CA300B223D8 /* PageContentHelper.m in Sources */,
 				CCBFDF3B183057DE00F40E27 /* TimeTravelPageView.m in Sources */,
+				CCEBCB0B1852E240006B6668 /* CreditUnion.m in Sources */,
+				CCEBCB111852E373006B6668 /* CreditTeam.m in Sources */,
 				CC3D5B3918289B1600AA4C64 /* PageAppViewController.m in Sources */,
 				CC5507F017FFBAF700D7E884 /* main.m in Sources */,
 				CCBFDF35183056C300F40E27 /* GamePageView.m in Sources */,
 				CC5507F417FFBAF700D7E884 /* HomeAppDelegate.m in Sources */,
 				CC5507FA17FFBAF700D7E884 /* HomeViewController.m in Sources */,
 				CCBE13B3181ECDEE00A15DAF /* SearchGamePage.m in Sources */,
+				CCEBCB0E1852E345006B6668 /* CreditMott.m in Sources */,
 				CCBE13B6181ECF9B00A15DAF /* FullImagePage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

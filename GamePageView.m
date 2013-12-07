@@ -80,12 +80,6 @@ UIButton *findObjectButton1, *findObjectButton2, *findObjectButton3;
     NSMutableArray *findObjectsData = [[NSMutableArray alloc] init];
     findObjectsData = [NSMutableArray arrayWithArray:[self getDataObjects]];
     
-    NSLog(@"objectsToFind size:");
-    NSLog(@"%d", [findObjectsData count]);
-    
-    NSLog(@"findObjectsData size:");
-    NSLog(@"%d", [findObjectsData count]);
-    
     ObjectToFind *object1 = [findObjectsData objectAtIndex:0];
     ObjectToFind *object2 = [findObjectsData objectAtIndex:1];
     ObjectToFind *object3 = [findObjectsData objectAtIndex:2];

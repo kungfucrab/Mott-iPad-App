@@ -12,5 +12,7 @@
 
 - (NSMutableDictionary *)getPageDataAtIndex:(int)index;
 - (int)getNumberOfPages;
+- (int)getNumberOfChapterPages;
+- (NSMutableArray *)getChapterPictures:(int)index;
 
 @end

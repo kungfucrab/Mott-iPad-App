@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HomeAppDelegate.h"
 
 @interface HomeViewController : UIViewController
+
+-(IBAction)storyButton:(id)sender;
 
 @end

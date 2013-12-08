@@ -26,4 +26,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)storyButton:(id)sender {
+    HomeAppDelegate *data = (HomeAppDelegate *)[[UIApplication sharedApplication] delegate];
+    data.pageIndex = 0;
+}
+
 @end

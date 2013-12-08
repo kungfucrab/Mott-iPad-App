@@ -13,6 +13,7 @@
 #import "FullImagePage.h"
 
 #import "PageContentHelper.h"
+#import "HomeAppDelegate.h"
 
 @interface PageAppViewController : UIViewController
 <UIPageViewControllerDataSource>

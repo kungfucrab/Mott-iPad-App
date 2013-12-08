@@ -39,6 +39,7 @@
 		CC55080517FFBAF800D7E884 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC5507E717FFBAF700D7E884 /* UIKit.framework */; };
 		CC55080D17FFBAF800D7E884 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CC55080B17FFBAF800D7E884 /* InfoPlist.strings */; };
 		CC55080F17FFBAF800D7E884 /* Mott_Storybook_AppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC55080E17FFBAF800D7E884 /* Mott_Storybook_AppTests.m */; };
+		CC8CC80C1853F46D0080B489 /* ChaptersView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC8CC80B1853F46D0080B489 /* ChaptersView.m */; };
 		CCA5A41918299CA300B223D8 /* PageContentHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA5A41818299CA300B223D8 /* PageContentHelper.m */; };
 		CCBE13B0181ECCDC00A15DAF /* ObjectToFind.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBE13AF181ECCDC00A15DAF /* ObjectToFind.m */; };
 		CCBE13B3181ECDEE00A15DAF /* SearchGamePage.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBE13B2181ECDEE00A15DAF /* SearchGamePage.m */; };
@@ -102,6 +103,8 @@
 		CC55080A17FFBAF800D7E884 /* Mott Storybook AppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Mott Storybook AppTests-Info.plist"; sourceTree = "<group>"; };
 		CC55080C17FFBAF800D7E884 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CC55080E17FFBAF800D7E884 /* Mott_Storybook_AppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Mott_Storybook_AppTests.m; sourceTree = "<group>"; };
+		CC8CC80A1853F46D0080B489 /* ChaptersView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChaptersView.h; sourceTree = "<group>"; };
+		CC8CC80B1853F46D0080B489 /* ChaptersView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChaptersView.m; sourceTree = "<group>"; };
 		CCA5A41718299CA300B223D8 /* PageContentHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageContentHelper.h; sourceTree = "<group>"; };
 		CCA5A41818299CA300B223D8 /* PageContentHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageContentHelper.m; sourceTree = "<group>"; };
 		CCBE13AE181ECCDC00A15DAF /* ObjectToFind.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectToFind.h; sourceTree = "<group>"; };
@@ -326,6 +329,8 @@
 			children = (
 				CCEBCB131852E577006B6668 /* chapters.h */,
 				CCEBCB141852E577006B6668 /* chapters.m */,
+				CC8CC80A1853F46D0080B489 /* ChaptersView.h */,
+				CC8CC80B1853F46D0080B489 /* ChaptersView.m */,
 			);
 			name = Chapters;
 			sourceTree = "<group>";
@@ -470,6 +475,7 @@
 				CCBFDF35183056C300F40E27 /* GamePageView.m in Sources */,
 				CC5507F417FFBAF700D7E884 /* HomeAppDelegate.m in Sources */,
 				CC5507FA17FFBAF700D7E884 /* HomeViewController.m in Sources */,
+				CC8CC80C1853F46D0080B489 /* ChaptersView.m in Sources */,
 				CCBE13B3181ECDEE00A15DAF /* SearchGamePage.m in Sources */,
 				CCEBCB0E1852E345006B6668 /* CreditMott.m in Sources */,
 				CCBE13B6181ECF9B00A15DAF /* FullImagePage.m in Sources */,

@@ -8,8 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HomeAppDelegate : UIResponder <UIApplicationDelegate>
+@interface HomeAppDelegate : UIResponder <UIApplicationDelegate> {
+    NSInteger pageIndex;
+    NSInteger boolValue;
+}
 
 @property (strong, nonatomic) UIWindow *window;
+
+@property(assign) NSInteger pageIndex;
+@property(assign) NSInteger boolValue;
 
 @end

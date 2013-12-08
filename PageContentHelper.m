@@ -18,12 +18,14 @@
 
 //private variables
 NSMutableArray *pageNames;
+NSMutableArray *chapterPictures;
 
 - (id)init {
     self = [super init];
     if(self){
         //init all variables when object created
         pageNames = [[NSMutableArray alloc]init];
+        chapterPictures = [[NSMutableArray alloc]init];
         
         //add all the names of each page related
         //to each method name and in order
@@ -34,12 +36,25 @@ NSMutableArray *pageNames;
         [pageNames addObject:@"spaceGame"];
         [pageNames addObject:@"timeTravel"];
         [pageNames addObject:@"finalPage"];
+        
+        [chapterPictures addObject:@"IntroPage.png"];
+        [chapterPictures addObject:@"timetravel.png"];
+        [chapterPictures addObject:@"Space_FinalDrawing.png"];
+        [chapterPictures addObject:@"DinoPage2.png"];
+        [chapterPictures addObject:@"Space_FinalDrawing.png"];
+        [chapterPictures addObject:@"timetravel.png"];
+        [chapterPictures addObject:@"FinalPage.png"];
     }
     return self;
 }
 
 - (int)getNumberOfPages {
     return [pageNames count];
+}
+
+- (int)getNumberOfChapterPages {
+    double value = [pageNames count];
+    return ceil(value/6);
 }
 
 - (NSMutableDictionary *)getPageDataAtIndex:(int)index {
@@ -215,6 +230,49 @@ NSMutableArray *pageNames;
     [page.objectsToFind addObject:object10];
     
     return page;
+}
+
+- (NSMutableArray *)getChapterPictures:(int)index {
+    NSMutableArray *subsetOfChapterPictures;
+    subsetOfChapterPictures = [[NSMutableArray alloc]init];
+    
+    chapterPictures = [[NSMutableArray alloc]init];
+    
+    [chapterPictures addObject:@"IntroPage.png"];
+    [chapterPictures addObject:@"timetravel.png"];
+    [chapterPictures addObject:@"Space_FinalDrawing.png"];
+    [chapterPictures addObject:@"DinoPage2.png"];
+    [chapterPictures addObject:@"Space_FinalDrawing.png"];
+    [chapterPictures addObject:@"timetravel.png"];
+    [chapterPictures addObject:@"FinalPage.png"];
+    
+    if(index == 0) {
+        //return first 6
+        for (int i = 0; i < 6; i++) {
+            NSMutableDictionary *dict = [[NSMutableDictionary alloc]init];
+            [dict setObject:[NSNumber numberWithInteger:i] forKey:@"index"];
+            [dict setObject:[chapterPictures objectAtIndex:i] forKey:@"image"];
+            
+            [subsetOfChapterPictures addObject:dict];
+        }
+    }
+    else if(index == ([self getNumberOfChapterPages] - 1)) {
+        int remainder = [self getNumberOfPages] - (([self getNumberOfPages]/6)*6);
+        for (int i = ([self getNumberOfPages] - remainder); i < [self getNumberOfPages]; i++) {
+            NSMutableDictionary *dict = [[NSMutableDictionary alloc]init];
+            [dict setObject:[NSNumber numberWithInteger:i] forKey:@"index"];
+            [dict setObject:[chapterPictures objectAtIndex:i] forKey:@"image"];
+            
+            [subsetOfChapterPictures addObject:dict];
+        }
+    }
+    else {
+        //TODO:
+        //return given 6 based on index
+        [NSException raise:@"No logic for given index to get chapters" format:@"No logic for given index to get chapters"];
+    }
+    
+    return subsetOfChapterPictures;
 }
 
 @end

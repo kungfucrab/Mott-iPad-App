@@ -104,6 +104,8 @@
 {
     [super viewDidLoad];
     
+    HomeAppDelegate *data = (HomeAppDelegate *)[[UIApplication sharedApplication] delegate];
+    NSInteger startIndex = data.pageIndex;
     self.helper = [[PageContentHelper alloc] init];
 	
     // Do any additional setup after loading the view, typically from a nib.
@@ -123,7 +125,7 @@
     
     //Index that it will initially start at, use this for chapters and set with a variable of some sort
     //this also sets up the current page we are planning to look at
-    UIViewController *initialViewController = [self viewControllerAtIndex:0];
+    UIViewController *initialViewController = [self viewControllerAtIndex:startIndex];
     
     NSArray *viewControllers = [NSArray arrayWithObject:initialViewController];
     

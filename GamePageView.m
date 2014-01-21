@@ -60,65 +60,71 @@ UIButton *findObjectButton1, *findObjectButton2, *findObjectButton3;
 //****************************************************************************
 //***************************Game Logic Functions*****************************
 //****************************************************************************
-- (NSMutableArray *)getDataObjects {
-    NSMutableArray *threeFindObjects = [[NSMutableArray alloc] init];
+- (NSMutableArray *)getDataObject {
+    NSMutableArray *findObjects = [[NSMutableArray alloc] init];
     
-    if([objectsToFind count] < 3) {
+    if([objectsToFind count] == 0) {
         objectsToFind = [NSMutableArray arrayWithArray:self.pageData.objectsToFind];
     }
     
-    for (int i = 0; i < 3; i++) {
+    for (int i = 0; i < 1; i++) {
         int index = rand() % [objectsToFind count];
-        [threeFindObjects addObject:[objectsToFind objectAtIndex:index]];
+        [findObjects addObject:[objectsToFind objectAtIndex:index]];
         [objectsToFind removeObjectAtIndex:index];
     }
     
-    return threeFindObjects;
+    return findObjects;
 }
 
-- (void) setupNewGameObjects {
+- (void) setupNewGameObject:(int)index {
     NSMutableArray *findObjectsData = [[NSMutableArray alloc] init];
-    findObjectsData = [NSMutableArray arrayWithArray:[self getDataObjects]];
+    findObjectsData = [NSMutableArray arrayWithArray:[self getDataObject]];
     
-    ObjectToFind *object1 = [findObjectsData objectAtIndex:0];
-    ObjectToFind *object2 = [findObjectsData objectAtIndex:1];
-    ObjectToFind *object3 = [findObjectsData objectAtIndex:2];
+    ObjectToFind *object = [findObjectsData objectAtIndex:0];
     
-    UIImage *image = [UIImage imageNamed:object1.image];
-    [findObject1View setImage:image];
+    UIImage *image;
+    CGRect frame;
     
-    image = [UIImage imageNamed:object2.image];
-    [findObject2View setImage:image];
-    
-    image = [UIImage imageNamed:object3.image];
-    [findObject3View setImage:image];
-    
-    CGRect frame = CGRectMake(object1.x, object1.y, object1.width, object1.height);
-    findObjectButton1 = [UIButton buttonWithType:UIButtonTypeCustom];
-    findObjectButton1.frame = frame;
-    [findObjectButton1 setTitle: NULL forState:UIControlStateNormal];
-    findObjectButton1.backgroundColor = [UIColor clearColor];
-    findObjectButton1.tag =2000;
-    [findObjectButton1 addTarget:self action:@selector(findObject1ButtonAction:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:findObjectButton1];
-    
-    frame = CGRectMake(object2.x, object2.y, object2.width, object2.height);
-    findObjectButton2 = [UIButton buttonWithType:UIButtonTypeCustom];
-    findObjectButton2.frame = frame;
-    [findObjectButton2 setTitle: NULL forState:UIControlStateNormal];
-    findObjectButton2.backgroundColor = [UIColor clearColor];
-    findObjectButton2.tag =2000;
-    [findObjectButton2 addTarget:self action:@selector(findObject2ButtonAction:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:findObjectButton2];
-    
-    frame = CGRectMake(object3.x, object3.y, object3.width, object3.height);
-    findObjectButton3 = [UIButton buttonWithType:UIButtonTypeCustom];
-    findObjectButton3.frame = frame;
-    [findObjectButton3 setTitle: NULL forState:UIControlStateNormal];
-    findObjectButton3.backgroundColor = [UIColor clearColor];
-    findObjectButton3.tag =2000;
-    [findObjectButton3 addTarget:self action:@selector(findObject3ButtonAction:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:findObjectButton3];
+    if (index == 1) {
+        image = [UIImage imageNamed:object.image];
+        [findObject1View setImage:image];
+        
+        frame = CGRectMake(object.x, object.y, object.width, object.height);
+        findObjectButton1 = [UIButton buttonWithType:UIButtonTypeCustom];
+        findObjectButton1.frame = frame;
+        [findObjectButton1 setTitle: NULL forState:UIControlStateNormal];
+        findObjectButton1.backgroundColor = [UIColor clearColor];
+        findObjectButton1.tag =2000;
+        [findObjectButton1 addTarget:self action:@selector(findObject1ButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:findObjectButton1];
+    }
+    else if (index == 2) {
+        image = [UIImage imageNamed:object.image];
+        [findObject2View setImage:image];
+        
+        frame = CGRectMake(object.x, object.y, object.width, object.height);
+        findObjectButton2 = [UIButton buttonWithType:UIButtonTypeCustom];
+        findObjectButton2.frame = frame;
+        [findObjectButton2 setTitle: NULL forState:UIControlStateNormal];
+        findObjectButton2.backgroundColor = [UIColor clearColor];
+        findObjectButton2.tag =2000;
+        [findObjectButton2 addTarget:self action:@selector(findObject2ButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:findObjectButton2];
+
+    }
+    else if (index == 3) {
+        image = [UIImage imageNamed:object.image];
+        [findObject3View setImage:image];
+        
+        frame = CGRectMake(object.x, object.y, object.width, object.height);
+        findObjectButton3 = [UIButton buttonWithType:UIButtonTypeCustom];
+        findObjectButton3.frame = frame;
+        [findObjectButton3 setTitle: NULL forState:UIControlStateNormal];
+        findObjectButton3.backgroundColor = [UIColor clearColor];
+        findObjectButton3.tag =2000;
+        [findObjectButton3 addTarget:self action:@selector(findObject3ButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:findObjectButton3];
+    }
 }
 
 - (void) gameReset {
@@ -132,7 +138,9 @@ UIButton *findObjectButton1, *findObjectButton2, *findObjectButton3;
     
     objectsFoundCount = 0;
     
-    [self setupNewGameObjects];
+    [self setupNewGameObject:1];
+    [self setupNewGameObject:2];
+    [self setupNewGameObject:3];
 }
 
 -(IBAction)resetButton:(id)sender {

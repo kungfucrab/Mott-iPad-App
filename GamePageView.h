@@ -30,6 +30,7 @@
 -(IBAction)findObject1ButtonAction:(id)sender;
 -(IBAction)findObject2ButtonAction:(id)sender;
 -(IBAction)findObject3ButtonAction:(id)sender;
--(IBAction)resetButton:(id)sender;
+-(IBAction)easyButton:(id)sender;
+-(IBAction)hardButton:(id)sender;
 
 @end

@@ -18,6 +18,7 @@
 
 int objectsFoundCount = 0;
 UIButton *findObjectButton1, *findObjectButton2, *findObjectButton3;
+bool isHard = false;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -136,8 +137,20 @@ UIButton *findObjectButton1, *findObjectButton2, *findObjectButton3;
     [self setupNewGameObject:3];
 }
 
--(IBAction)resetButton:(id)sender {
+-(IBAction)easyButton:(id)sender {
+    isHard = false;
     [self gameReset];
+}
+
+-(IBAction)hardButton:(id)sender {
+    isHard = true;
+    [self startHardMode];
+}
+//****************************************************************************
+//******************************Hard Mode Functions***************************
+//****************************************************************************
+-(void)startHardMode {
+    
 }
 //****************************************************************************
 //***************Button Actions for Objects to Find in Illustration***********

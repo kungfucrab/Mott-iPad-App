@@ -60,27 +60,20 @@ UIButton *findObjectButton1, *findObjectButton2, *findObjectButton3;
 //****************************************************************************
 //***************************Game Logic Functions*****************************
 //****************************************************************************
-- (NSMutableArray *)getDataObject {
-    NSMutableArray *findObjects = [[NSMutableArray alloc] init];
-    
-    if([objectsToFind count] == 0) {
+- (ObjectToFind *)getDataObject:(int) imageID {
+    if([objectsToFind count] < 4 && imageID == 1) {
         objectsToFind = [NSMutableArray arrayWithArray:self.pageData.objectsToFind];
     }
     
-    for (int i = 0; i < 1; i++) {
-        int index = rand() % [objectsToFind count];
-        [findObjects addObject:[objectsToFind objectAtIndex:index]];
-        [objectsToFind removeObjectAtIndex:index];
-    }
+    int index = rand() % [objectsToFind count];
+    ObjectToFind *gameObject = [objectsToFind objectAtIndex:index];
+    [objectsToFind removeObjectAtIndex:index];
     
-    return findObjects;
+    return gameObject;
 }
 
 - (void) setupNewGameObject:(int)index {
-    NSMutableArray *findObjectsData = [[NSMutableArray alloc] init];
-    findObjectsData = [NSMutableArray arrayWithArray:[self getDataObject]];
-    
-    ObjectToFind *object = [findObjectsData objectAtIndex:0];
+    ObjectToFind *object = [self getDataObject:index];
     
     UIImage *image;
     CGRect frame;
@@ -178,5 +171,72 @@ UIButton *findObjectButton1, *findObjectButton2, *findObjectButton3;
         [self gameReset];
     }
 }
-
+//****************************************************************************
+//*****************************Grayscale Object*******************************
+//****************************************************************************
+- (UIImage *)convertToGreyscale:(UIImage *)i
+{
+    int kRed = 1;
+    int kGreen = 2;
+    int kBlue = 4;
+    
+    int colors = kGreen;
+    int m_width = i.size.width;
+    int m_height = i.size.height;
+    
+    uint32_t *rgbImage = (uint32_t *) malloc(m_width * m_height * sizeof(uint32_t));
+    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+    CGContextRef context = CGBitmapContextCreate(rgbImage, m_width, m_height, 8, m_width * 4, colorSpace, kCGBitmapByteOrder32Little | kCGImageAlphaPremultipliedLast);
+    CGContextSetInterpolationQuality(context, kCGInterpolationHigh);
+    CGContextSetShouldAntialias(context, NO);
+    CGContextDrawImage(context, CGRectMake(0, 0, m_width, m_height), [i CGImage]);
+    CGContextRelease(context);
+    CGColorSpaceRelease(colorSpace);
+    
+    // now convert to grayscale
+    uint8_t *m_imageData = (uint8_t *) malloc(m_width * m_height);
+    uint8_t *alphaData = (uint8_t *) malloc(m_width*m_height);
+    
+    for(int y = 0; y < m_height; y++) {
+        for(int x = 0; x < m_width; x++) {
+            uint32_t rgbPixel=rgbImage[y*m_width+x];
+            uint32_t sum=0,count=0;
+            if (colors & kRed) {sum += (rgbPixel>>24)&255; count++;}
+            if (colors & kGreen) {sum += (rgbPixel>>16)&255; count++;}
+            if (colors & kBlue) {sum += (rgbPixel>>8)&255; count++;}
+            alphaData[y*m_width+x] = rgbPixel>>0 & 255;
+            m_imageData[y*m_width+x]=sum/count;
+        }
+    }
+    free(rgbImage);
+    
+    // convert from a gray scale image back into a UIImage
+    uint8_t *result = (uint8_t *) calloc(m_width * m_height *sizeof(uint32_t), 1);
+    
+    // process the image back to rgb
+    for(int i = 0; i < m_height * m_width; i++) {
+        //Copying Aplha value
+        result[i*4] = alphaData[i];
+        int val=m_imageData[i];
+        result[i*4+1]=val;
+        result[i*4+2]=val;
+        result[i*4+3]=val;
+    }
+    
+    // create a UIImage
+    colorSpace = CGColorSpaceCreateDeviceRGB();
+    context = CGBitmapContextCreate(result, m_width, m_height, 8, m_width * sizeof(uint32_t), colorSpace, kCGBitmapByteOrder32Little | kCGImageAlphaPremultipliedLast);
+    CGImageRef image = CGBitmapContextCreateImage(context);
+    CGContextRelease(context);
+    CGColorSpaceRelease(colorSpace);
+    UIImage *resultUIImage = [UIImage imageWithCGImage:image];
+    CGImageRelease(image);
+    
+    free(m_imageData);
+    free(alphaData);
+    // make sure the data will be released by giving it to an autoreleased NSData
+    [NSData dataWithBytesNoCopy:result length:m_width * m_height];
+    
+    return resultUIImage;
+}
 @end

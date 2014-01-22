@@ -40,7 +40,7 @@ NSMutableArray *chapterPictures;
     int index = [self.dataObject integerValue];
     chapterPictures = [self.helper getChapterPictures:index];
 
-    NSLog(@"%d", [chapterPictures count]);
+    //NSLog(@"%d", [chapterPictures count]);
 
     [self populateChapters];
 }

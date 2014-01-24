@@ -79,8 +79,12 @@ bool isHard = false;
     UIImage *image;
     CGRect frame;
     
+    image = [UIImage imageNamed:object.image];
+    if (isHard == true) {
+        image = [self convertToGreyscale:image];
+    }
+    
     if (index == 1) {
-        image = [UIImage imageNamed:object.image];
         [findObject1View setImage:image];
         
         frame = CGRectMake(object.x, object.y, object.width, object.height);
@@ -89,11 +93,17 @@ bool isHard = false;
         [findObjectButton1 setTitle: NULL forState:UIControlStateNormal];
         findObjectButton1.backgroundColor = [UIColor clearColor];
         findObjectButton1.tag =2000;
-        [findObjectButton1 addTarget:self action:@selector(findObject1ButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+        
+        if (isHard == true) {
+            [findObjectButton1 addTarget:self action:@selector(findObject1ButtonActionHard:) forControlEvents:UIControlEventTouchUpInside];
+        }
+        else if (isHard == false) {
+            [findObjectButton1 addTarget:self action:@selector(findObject1ButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+        }
+        
         [self.view addSubview:findObjectButton1];
     }
     else if (index == 2) {
-        image = [UIImage imageNamed:object.image];
         [findObject2View setImage:image];
         
         frame = CGRectMake(object.x, object.y, object.width, object.height);
@@ -102,12 +112,18 @@ bool isHard = false;
         [findObjectButton2 setTitle: NULL forState:UIControlStateNormal];
         findObjectButton2.backgroundColor = [UIColor clearColor];
         findObjectButton2.tag =2000;
-        [findObjectButton2 addTarget:self action:@selector(findObject2ButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+        
+        if (isHard == true) {
+            [findObjectButton2 addTarget:self action:@selector(findObject2ButtonActionHard:) forControlEvents:UIControlEventTouchUpInside];
+        }
+        else if (isHard == false) {
+            [findObjectButton2 addTarget:self action:@selector(findObject2ButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+        }
+            
         [self.view addSubview:findObjectButton2];
 
     }
     else if (index == 3) {
-        image = [UIImage imageNamed:object.image];
         [findObject3View setImage:image];
         
         frame = CGRectMake(object.x, object.y, object.width, object.height);
@@ -116,7 +132,14 @@ bool isHard = false;
         [findObjectButton3 setTitle: NULL forState:UIControlStateNormal];
         findObjectButton3.backgroundColor = [UIColor clearColor];
         findObjectButton3.tag =2000;
-        [findObjectButton3 addTarget:self action:@selector(findObject3ButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+        
+        if (isHard == true) {
+            [findObjectButton3 addTarget:self action:@selector(findObject3ButtonActionHard:) forControlEvents:UIControlEventTouchUpInside];
+        }
+        else if (isHard == false) {
+            [findObjectButton3 addTarget:self action:@selector(findObject3ButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+        }
+        
         [self.view addSubview:findObjectButton3];
     }
 }
@@ -149,8 +172,114 @@ bool isHard = false;
 //****************************************************************************
 //******************************Hard Mode Functions***************************
 //****************************************************************************
+NSTimer *timer1;
+NSTimer *timer2;
+NSTimer *timer3;
+NSTimer *gameTimer;
+
+int gameObject1tick;
+int gameObject2tick;
+int gameObject3tick;
+int gameTick;
+
+int score = 0;
+
 -(void)startHardMode {
+    [self resetHardMode];
+    [self createBigButton];
     
+    //setup "god" timer
+    gameTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self
+                                                       selector:@selector(hardModeTicker) userInfo:nil repeats:YES];
+    
+    [self createHardGameObject:gameObject1tick :timer1 :1 :234242];
+    [self createHardGameObject:gameObject2tick :timer2 :2 :344342];
+    [self createHardGameObject:gameObject3tick :timer3 :3 :129223];
+}
+
+-(void)createHardGameObject:(int)tick :(NSTimer *)timer :(int)objectID :(int)arrayOfBoxes {
+    [self setupNewGameObject:objectID];
+    
+    NSMutableDictionary *gameObject1Dict = [[NSMutableDictionary alloc] init];
+    [gameObject1Dict setObject:[NSNumber numberWithInteger:gameObject1tick] forKey:@"tick"];
+    [gameObject1Dict setObject:[NSNumber numberWithInteger:1] forKey:@"objectID"];
+    //add array of associated squares to remove later in tick
+    
+    timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self
+                                           selector:@selector(gameObjectTicker:) userInfo:gameObject1Dict repeats:YES];
+}
+
+- (IBAction)losePointsButtonAction:(id)sender {
+    //subtract points from the score because they clicked "big button"
+    //subtract 1 life
+}
+
+- (void)resetHardMode {
+    
+}
+
+- (void)createBigButton {
+    
+}
+
+- (void)subtractPoint {
+    //subtract point from score
+    score--;
+}
+
+-(void)addPoint {
+    //add point to score
+    score++;
+}
+
+- (void)hardModeTicker {
+    if (gameTick == 0) {
+        [gameTimer invalidate];
+        //kill the entire game because its no over
+            //kill all the other three timers
+            //reset all the game objects on screen
+            //reset game to easy?
+    }
+    else {
+        gameTick--;
+        //update clock label
+    }
+}
+
+- (void)gameObjectTicker:(NSTimer*)timer {
+    
+    int tick = [[[timer userInfo] objectForKey:@"tick"] integerValue];
+    int objectID = [[[timer userInfo] objectForKey:@"objectID"] integerValue];
+    //get the array of associated squares
+    
+    if (tick == 0) {
+        [timer invalidate];
+        //kill that object
+        //get a new object
+        //lose points from main score because they failed to find object
+    }
+    else {
+        tick--;
+        //remove a square from the array of associated squares
+    }
+}
+
+- (IBAction)findObject1ButtonActionHard:(id)sender {
+    [self addPoint];
+    //remove that object/button
+    [self createHardGameObject:gameObject1tick :timer1 :1 :234242];
+}
+
+- (IBAction)findObject2ButtonActionHard:(id)sender {
+    [self addPoint];
+    //remove that object/button
+    [self createHardGameObject:gameObject2tick :timer2 :2 :344342];
+}
+
+- (IBAction)findObject3ButtonActionHard:(id)sender {
+    [self addPoint];
+    //remove that object/button
+    [self createHardGameObject:gameObject3tick :timer3 :3 :129223];
 }
 //****************************************************************************
 //***************Button Actions for Objects to Find in Illustration***********

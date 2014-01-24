@@ -33,4 +33,9 @@
 -(IBAction)easyButton:(id)sender;
 -(IBAction)hardButton:(id)sender;
 
+- (IBAction)losePointsButtonAction:(id)sender;
+- (IBAction)findObject1ButtonActionHard:(id)sender;
+- (IBAction)findObject2ButtonActionHard:(id)sender;
+- (IBAction)findObject3ButtonActionHard:(id)sender;
+
 @end

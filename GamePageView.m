@@ -14,7 +14,7 @@
 
 @implementation GamePageView
 
-@synthesize entireImageView, findObject1View, findObject2View, findObject3View, objectsToFind;
+@synthesize entireImageView, findObject1View, findObject2View, findObject3View, objectsToFind, object1Squares, object2Squares, object3Squares;
 
 int objectsFoundCount = 0;
 UIButton *findObjectButton1, *findObjectButton2, *findObjectButton3;
@@ -43,6 +43,10 @@ bool isHard = false;
     
     objectsToFind = [[NSMutableArray alloc] init];
     objectsToFind = [NSMutableArray arrayWithArray:self.pageData.objectsToFind];
+    
+    object1Squares = [[NSMutableArray alloc] init];
+    object2Squares = [[NSMutableArray alloc] init];
+    object3Squares = [[NSMutableArray alloc] init];
     
     [self gameReset];
 }
@@ -145,6 +149,8 @@ bool isHard = false;
 }
 
 - (void) gameReset {
+    isHard = false;
+    
     [findObjectButton1 removeFromSuperview];
     [findObjectButton2 removeFromSuperview];
     [findObjectButton3 removeFromSuperview];
@@ -183,62 +189,81 @@ int gameObject3tick;
 int gameTick;
 
 int score = 0;
+int lives;
 
 -(void)startHardMode {
-    [self resetHardMode];
+    [self endHardMode];
     [self createBigButton];
     
-    //setup "god" timer
-    gameTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self
-                                                       selector:@selector(hardModeTicker) userInfo:nil repeats:YES];
+    isHard = true;
     
-    [self createHardGameObject:gameObject1tick :timer1 :1 :234242];
-    [self createHardGameObject:gameObject2tick :timer2 :2 :344342];
-    [self createHardGameObject:gameObject3tick :timer3 :3 :129223];
+    gameObject1tick = 5;
+    gameObject2tick = 5;
+    gameObject3tick = 5;
+    [self createHardGameObject:timer1 :1 :234242];
+    [self createHardGameObject:timer2 :2 :344342];
+    [self createHardGameObject:timer3 :3 :129223];
+    
+    //setup "god" timer
+    gameTick = 30;
+    gameTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self
+                                               selector:@selector(hardModeTicker) userInfo:nil repeats:YES];
 }
 
--(void)createHardGameObject:(int)tick :(NSTimer *)timer :(int)objectID :(int)arrayOfBoxes {
+-(void)createHardGameObject:(NSTimer *)timer :(int)objectID :(int)arrayOfBoxes {
     [self setupNewGameObject:objectID];
     
-    NSMutableDictionary *gameObject1Dict = [[NSMutableDictionary alloc] init];
-    [gameObject1Dict setObject:[NSNumber numberWithInteger:gameObject1tick] forKey:@"tick"];
-    [gameObject1Dict setObject:[NSNumber numberWithInteger:1] forKey:@"objectID"];
+    NSMutableDictionary *gameObjectDict = [[NSMutableDictionary alloc] init];
+    [gameObjectDict setObject:[NSNumber numberWithInteger:objectID] forKey:@"objectID"];
     //add array of associated squares to remove later in tick
     
     timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self
-                                           selector:@selector(gameObjectTicker:) userInfo:gameObject1Dict repeats:YES];
+                                           selector:@selector(gameObjectTicker:) userInfo:gameObjectDict repeats:YES];
 }
 
 - (IBAction)losePointsButtonAction:(id)sender {
-    //subtract points from the score because they clicked "big button"
-    //subtract 1 life
+    [self subtractPoint];
+    [self subtractLife];
 }
 
-- (void)resetHardMode {
+- (void)endHardMode {
+    [timer1 invalidate];
+    [timer2 invalidate];
+    [timer3 invalidate];
     
+    [findObjectButton1 removeFromSuperview];
+    [findObjectButton2 removeFromSuperview];
+    [findObjectButton3 removeFromSuperview];
+    
+    findObject1View.image = nil;
+    findObject2View.image = nil;
+    findObject3View.image = nil;
 }
 
 - (void)createBigButton {
     
 }
 
+- (void)subtractLife {
+    lives--;
+    if(lives == 0) {
+        [self endHardMode];
+    }
+}
+
 - (void)subtractPoint {
-    //subtract point from score
     score--;
 }
 
 -(void)addPoint {
-    //add point to score
     score++;
 }
 
 - (void)hardModeTicker {
     if (gameTick == 0) {
         [gameTimer invalidate];
-        //kill the entire game because its no over
-            //kill all the other three timers
-            //reset all the game objects on screen
-            //reset game to easy?
+        [self endHardMode];
+        [self gameReset];
     }
     else {
         gameTick--;
@@ -247,39 +272,89 @@ int score = 0;
 }
 
 - (void)gameObjectTicker:(NSTimer*)timer {
-    
-    int tick = [[[timer userInfo] objectForKey:@"tick"] integerValue];
-    int objectID = [[[timer userInfo] objectForKey:@"objectID"] integerValue];
-    //get the array of associated squares
-    
-    if (tick == 0) {
-        [timer invalidate];
-        //kill that object
-        //get a new object
-        //lose points from main score because they failed to find object
-    }
-    else {
-        tick--;
-        //remove a square from the array of associated squares
+    if(isHard == true) {
+        int objectID = [[[timer userInfo] objectForKey:@"objectID"] integerValue];
+        //get the array of associated squares
+        
+        int tick = 0;
+        
+        if (objectID == 1) {
+            tick = gameObject1tick;
+        }
+        else if(objectID == 2) {
+            tick = gameObject2tick;
+        }
+        else if(objectID == 3) {
+            tick = gameObject3tick ;
+        }
+
+        if (tick == 0) {
+            [timer invalidate];
+            [self subtractLife];
+            [self subtractPoint];
+            
+            if(objectID == 1) {
+                [self deleteAndCreateHardObject1];
+            }
+            else if(objectID ==2) {
+                [self deleteAndCreateHardObject2];
+            }
+            else if(objectID == 3) {
+                [self deleteAndCreateHardObject3];
+            }
+        }
+        else {
+            if (objectID == 1) {
+                gameObject1tick--;
+            }
+            else if(objectID == 2) {
+                gameObject2tick--;
+            }
+            else if(objectID == 3) {
+                gameObject3tick--;
+            }
+            //remove a square from the array of associated squares
+        }
     }
 }
 
 - (IBAction)findObject1ButtonActionHard:(id)sender {
     [self addPoint];
-    //remove that object/button
-    [self createHardGameObject:gameObject1tick :timer1 :1 :234242];
+    [self deleteAndCreateHardObject1];
 }
 
 - (IBAction)findObject2ButtonActionHard:(id)sender {
     [self addPoint];
-    //remove that object/button
-    [self createHardGameObject:gameObject2tick :timer2 :2 :344342];
+    [self deleteAndCreateHardObject2];
 }
 
 - (IBAction)findObject3ButtonActionHard:(id)sender {
     [self addPoint];
-    //remove that object/button
-    [self createHardGameObject:gameObject3tick :timer3 :3 :129223];
+    [self deleteAndCreateHardObject3];
+}
+
+- (void) deleteAndCreateHardObject1 {
+    [findObjectButton1 removeFromSuperview];
+    findObject1View.image = nil;
+    gameObject1tick = 5;
+    [timer1 invalidate];
+    [self createHardGameObject:timer1 :1 :234242];
+}
+
+- (void) deleteAndCreateHardObject2 {
+    [findObjectButton2 removeFromSuperview];
+    findObject2View.image = nil;
+    gameObject2tick = 5;
+    [timer2 invalidate];
+    [self createHardGameObject:timer2 :2 :344342];
+}
+
+- (void) deleteAndCreateHardObject3 {
+    [findObjectButton3 removeFromSuperview];
+    findObject3View.image = nil;
+    gameObject3tick = 5;
+    [timer3 invalidate];
+    [self createHardGameObject:timer3 :3 :129223];
 }
 //****************************************************************************
 //***************Button Actions for Objects to Find in Illustration***********

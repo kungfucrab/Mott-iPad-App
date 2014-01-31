@@ -17,6 +17,10 @@
     IBOutlet UIImageView *findObject3View;
     
     NSMutableArray *objectsToFind;
+    
+    NSMutableArray *object1Squares;
+    NSMutableArray *object2Squares;
+    NSMutableArray *object3Squares;
 }
 
 @property (strong, nonatomic) id dataObject;
@@ -26,6 +30,10 @@
 @property(strong, nonatomic) UIImageView *findObject2View;
 @property(strong, nonatomic) UIImageView *findObject3View;
 @property(strong, nonatomic) NSMutableArray *objectsToFind;
+
+@property(strong, nonatomic) NSMutableArray *object1Squares;
+@property(strong, nonatomic) NSMutableArray *object2Squares;
+@property(strong, nonatomic) NSMutableArray *object3Squares;
 
 -(IBAction)findObject1ButtonAction:(id)sender;
 -(IBAction)findObject2ButtonAction:(id)sender;

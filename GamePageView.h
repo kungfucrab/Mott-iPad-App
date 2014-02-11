@@ -16,6 +16,13 @@
     IBOutlet UIImageView *findObject2View;
     IBOutlet UIImageView *findObject3View;
     
+    IBOutlet UILabel *scoreLabel;
+    IBOutlet UILabel *livesLabel;
+    IBOutlet UILabel *timerLabel;
+    IBOutlet UILabel *scoreVarLabel;
+    IBOutlet UILabel *livesVarLabel;
+    IBOutlet UILabel *timerVarLabel;
+    
     NSMutableArray *objectsToFind;
     
     NSMutableArray *object1Squares;
@@ -30,6 +37,13 @@
 @property(strong, nonatomic) UIImageView *findObject2View;
 @property(strong, nonatomic) UIImageView *findObject3View;
 @property(strong, nonatomic) NSMutableArray *objectsToFind;
+
+@property(strong, nonatomic) UILabel *scoreLabel;
+@property(strong, nonatomic) UILabel *livesLabel;
+@property(strong, nonatomic) UILabel *timerLabel;
+@property(strong, nonatomic) UILabel *scoreVarLabel;
+@property(strong, nonatomic) UILabel *livesVarLabel;
+@property(strong, nonatomic) UILabel *timerVarLabel;
 
 @property(strong, nonatomic) NSMutableArray *object1Squares;
 @property(strong, nonatomic) NSMutableArray *object2Squares;

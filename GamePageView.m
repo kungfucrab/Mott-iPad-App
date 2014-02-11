@@ -14,11 +14,14 @@
 
 @implementation GamePageView
 
-@synthesize entireImageView, findObject1View, findObject2View, findObject3View, objectsToFind, object1Squares, object2Squares, object3Squares;
+@synthesize entireImageView, findObject1View, findObject2View, findObject3View,
+objectsToFind, object1Squares, object2Squares, object3Squares,
+scoreLabel, livesLabel, timerLabel, scoreVarLabel, livesVarLabel, timerVarLabel;
 
 int objectsFoundCount = 0;
 UIButton *findObjectButton1, *findObjectButton2, *findObjectButton3;
 bool isHard = false;
+bool startedHardGame = false;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -32,6 +35,10 @@ bool isHard = false;
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    
+    objectsFoundCount = 0;
+    isHard = false;
+    startedHardGame = false;
     
     //entireImageView.contentMode = UIViewContentModeScaleAspectFit;
     findObject1View.contentMode = UIViewContentModeScaleAspectFit;
@@ -188,26 +195,36 @@ int gameObject2tick;
 int gameObject3tick;
 int gameTick;
 
-int score = 0;
+int score;
 int lives;
 
 -(void)startHardMode {
-    [self endHardMode];
-    [self createBigButton];
-    
-    isHard = true;
-    
-    gameObject1tick = 5;
-    gameObject2tick = 5;
-    gameObject3tick = 5;
-    [self createHardGameObject:timer1 :1 :234242];
-    [self createHardGameObject:timer2 :2 :344342];
-    [self createHardGameObject:timer3 :3 :129223];
-    
-    //setup "god" timer
-    gameTick = 30;
-    gameTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self
-                                               selector:@selector(hardModeTicker) userInfo:nil repeats:YES];
+    if (startedHardGame == false) {
+        startedHardGame = true;
+        [self endHardMode];
+        [self createBigButton];
+        
+        isHard = true;
+        score = 0;
+        lives = 5;
+        
+        gameObject1tick = 5;
+        gameObject2tick = 5;
+        gameObject3tick = 5;
+        [self createHardGameObject:timer1 :1 :234242];
+        [self createHardGameObject:timer2 :2 :344342];
+        [self createHardGameObject:timer3 :3 :129223];
+        
+        //setup "god" timer
+        gameTick = 30;
+        
+        timerVarLabel.text = [NSString stringWithFormat:@"%d",gameTick];
+        scoreVarLabel.text = [NSString stringWithFormat:@"%d",score];
+        livesVarLabel.text = [NSString stringWithFormat:@"%d",lives];
+        
+        gameTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self
+                                                   selector:@selector(hardModeTicker) userInfo:nil repeats:YES];
+    }
 }
 
 -(void)createHardGameObject:(NSTimer *)timer :(int)objectID :(int)arrayOfBoxes {
@@ -227,6 +244,9 @@ int lives;
 }
 
 - (void)endHardMode {
+    timerVarLabel.text = @"0";
+    livesVarLabel.text = @"0";
+    
     [timer1 invalidate];
     [timer2 invalidate];
     [timer3 invalidate];
@@ -246,28 +266,28 @@ int lives;
 
 - (void)subtractLife {
     lives--;
-    if(lives == 0) {
-        [self endHardMode];
-    }
+    livesVarLabel.text = [NSString stringWithFormat:@"%d",lives];
 }
 
 - (void)subtractPoint {
     score--;
+    scoreVarLabel.text = [NSString stringWithFormat:@"%d",score];
 }
 
 -(void)addPoint {
     score++;
+    scoreVarLabel.text = [NSString stringWithFormat:@"%d",score];
 }
 
 - (void)hardModeTicker {
-    if (gameTick == 0) {
+    if (gameTick == 0 || lives == 0) {
         [gameTimer invalidate];
         [self endHardMode];
         [self gameReset];
     }
     else {
         gameTick--;
-        //update clock label
+        timerVarLabel.text = [NSString stringWithFormat:@"%d",gameTick];
     }
 }
 

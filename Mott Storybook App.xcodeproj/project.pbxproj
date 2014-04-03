@@ -39,6 +39,9 @@
 		CC55080517FFBAF800D7E884 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC5507E717FFBAF700D7E884 /* UIKit.framework */; };
 		CC55080D17FFBAF800D7E884 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CC55080B17FFBAF800D7E884 /* InfoPlist.strings */; };
 		CC55080F17FFBAF800D7E884 /* Mott_Storybook_AppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC55080E17FFBAF800D7E884 /* Mott_Storybook_AppTests.m */; };
+		CC5F837518ED2710003C35E3 /* o.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CC5F837218ED2710003C35E3 /* o.jpg */; };
+		CC5F837618ED2710003C35E3 /* x.png in Resources */ = {isa = PBXBuildFile; fileRef = CC5F837318ED2710003C35E3 /* x.png */; };
+		CC5F837718ED2710003C35E3 /* tic-tac-toe-board.png in Resources */ = {isa = PBXBuildFile; fileRef = CC5F837418ED2710003C35E3 /* tic-tac-toe-board.png */; };
 		CC8CC80C1853F46D0080B489 /* ChaptersView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC8CC80B1853F46D0080B489 /* ChaptersView.m */; };
 		CCA5A41918299CA300B223D8 /* PageContentHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA5A41818299CA300B223D8 /* PageContentHelper.m */; };
 		CCBE13B0181ECCDC00A15DAF /* ObjectToFind.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBE13AF181ECCDC00A15DAF /* ObjectToFind.m */; };
@@ -103,6 +106,9 @@
 		CC55080A17FFBAF800D7E884 /* Mott Storybook AppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Mott Storybook AppTests-Info.plist"; sourceTree = "<group>"; };
 		CC55080C17FFBAF800D7E884 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CC55080E17FFBAF800D7E884 /* Mott_Storybook_AppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Mott_Storybook_AppTests.m; sourceTree = "<group>"; };
+		CC5F837218ED2710003C35E3 /* o.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = o.jpg; sourceTree = "<group>"; };
+		CC5F837318ED2710003C35E3 /* x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = x.png; sourceTree = "<group>"; };
+		CC5F837418ED2710003C35E3 /* tic-tac-toe-board.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tic-tac-toe-board.png"; sourceTree = "<group>"; };
 		CC8CC80A1853F46D0080B489 /* ChaptersView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChaptersView.h; sourceTree = "<group>"; };
 		CC8CC80B1853F46D0080B489 /* ChaptersView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChaptersView.m; sourceTree = "<group>"; };
 		CCA5A41718299CA300B223D8 /* PageContentHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageContentHelper.h; sourceTree = "<group>"; };
@@ -251,6 +257,16 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		CC5F837118ED26CF003C35E3 /* TicTacToe */ = {
+			isa = PBXGroup;
+			children = (
+				CC5F837218ED2710003C35E3 /* o.jpg */,
+				CC5F837318ED2710003C35E3 /* x.png */,
+				CC5F837418ED2710003C35E3 /* tic-tac-toe-board.png */,
+			);
+			name = TicTacToe;
+			sourceTree = "<group>";
+		};
 		CCA5A41A1829C2C000B223D8 /* PageContentHelper */ = {
 			isa = PBXGroup;
 			children = (
@@ -287,6 +303,7 @@
 		CCBE13BA181ED0B800A15DAF /* TestImages */ = {
 			isa = PBXGroup;
 			children = (
+				CC5F837118ED26CF003C35E3 /* TicTacToe */,
 				CC179495184FC72C008B17F5 /* SpaceExample */,
 				CC515715182ACEC600BB66A8 /* DinoPage1Game.png */,
 				CC515716182ACEC600BB66A8 /* DinoPage2.png */,
@@ -425,9 +442,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC5F837718ED2710003C35E3 /* tic-tac-toe-board.png in Resources */,
+				CC5F837618ED2710003C35E3 /* x.png in Resources */,
 				CC1794A5184FC752008B17F5 /* toothpaste.png in Resources */,
 				CC1794A4184FC752008B17F5 /* tigerbutt.png in Resources */,
 				CC1794A3184FC752008B17F5 /* swiss_cheese.png in Resources */,
+				CC5F837518ED2710003C35E3 /* o.jpg in Resources */,
 				CC5507FC17FFBAF700D7E884 /* Images.xcassets in Resources */,
 				CC51571F182ACEC600BB66A8 /* IntroPage.png in Resources */,
 				CC1794A9184FC752008B17F5 /* rabbit.png in Resources */,

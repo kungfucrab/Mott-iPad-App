@@ -18,6 +18,10 @@
 objectsToFind, object1Squares, object2Squares, object3Squares,
 scoreLabel, livesLabel, timerLabel, scoreVarLabel, livesVarLabel, timerVarLabel;
 
+@synthesize Image1Box1, Image1Box2, Image1Box3, Image1Box4;
+@synthesize Image2Box1, Image2Box2, Image2Box3, Image2Box4;
+@synthesize Image3Box1, Image3Box2, Image3Box3, Image3Box4;
+
 int objectsFoundCount = 0;
 UIButton *findObjectButton1, *findObjectButton2, *findObjectButton3;
 bool isHard = false;
@@ -34,6 +38,22 @@ bool startedHardGame = false;
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    ////////////////TESTING///////////////////////////////////
+//    Image1Box1.backgroundColor = [UIColor clearColor];
+//    Image1Box2.backgroundColor = [UIColor clearColor];
+//    Image1Box3.backgroundColor = [UIColor clearColor];
+//    Image1Box4.backgroundColor = [UIColor clearColor];
+//    
+//    Image2Box1.backgroundColor = [UIColor clearColor];
+//    Image2Box2.backgroundColor = [UIColor clearColor];
+//    Image2Box3.backgroundColor = [UIColor clearColor];
+//    Image2Box4.backgroundColor = [UIColor clearColor];
+//    
+//    Image3Box1.backgroundColor = [UIColor clearColor];
+//    Image3Box2.backgroundColor = [UIColor clearColor];
+//    Image3Box3.backgroundColor = [UIColor clearColor];
+//    Image3Box4.backgroundColor = [UIColor clearColor];
+    ///////////////////////////////////////////////////////////////
     [super viewWillAppear:animated];
     
     objectsFoundCount = 0;
@@ -206,17 +226,17 @@ int lives;
         
         isHard = true;
         score = 0;
-        lives = 5;
+        lives = 6;
         
-        gameObject1tick = 5;
-        gameObject2tick = 5;
-        gameObject3tick = 5;
+        gameObject1tick = 6;
+        gameObject2tick = 6;
+        gameObject3tick = 6;
         [self createHardGameObject:timer1 :1 :234242];
         [self createHardGameObject:timer2 :2 :344342];
         [self createHardGameObject:timer3 :3 :129223];
         
         //setup "god" timer
-        gameTick = 30;
+        gameTick = 35;
         
         timerVarLabel.text = [NSString stringWithFormat:@"%d",gameTick];
         scoreVarLabel.text = [NSString stringWithFormat:@"%d",score];
@@ -275,7 +295,7 @@ int lives;
 }
 
 -(void)addPoint {
-    score++;
+    score = score + 3;
     scoreVarLabel.text = [NSString stringWithFormat:@"%d",score];
 }
 
@@ -356,7 +376,7 @@ int lives;
 - (void) deleteAndCreateHardObject1 {
     [findObjectButton1 removeFromSuperview];
     findObject1View.image = nil;
-    gameObject1tick = 5;
+    gameObject1tick = 6;
     [timer1 invalidate];
     [self createHardGameObject:timer1 :1 :234242];
 }
@@ -364,7 +384,7 @@ int lives;
 - (void) deleteAndCreateHardObject2 {
     [findObjectButton2 removeFromSuperview];
     findObject2View.image = nil;
-    gameObject2tick = 5;
+    gameObject2tick = 6;
     [timer2 invalidate];
     [self createHardGameObject:timer2 :2 :344342];
 }
@@ -372,7 +392,7 @@ int lives;
 - (void) deleteAndCreateHardObject3 {
     [findObjectButton3 removeFromSuperview];
     findObject3View.image = nil;
-    gameObject3tick = 5;
+    gameObject3tick = 6;
     [timer3 invalidate];
     [self createHardGameObject:timer3 :3 :129223];
 }

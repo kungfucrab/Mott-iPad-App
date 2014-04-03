@@ -23,6 +23,22 @@
     IBOutlet UILabel *livesVarLabel;
     IBOutlet UILabel *timerVarLabel;
     
+    IBOutlet UILabel *Image1Box1;
+    IBOutlet UILabel *Image1Box2;
+    IBOutlet UILabel *Image1Box3;
+    IBOutlet UILabel *Image1Box4;
+    
+    IBOutlet UILabel *Image2Box1;
+    IBOutlet UILabel *Image2Box2;
+    IBOutlet UILabel *Image2Box3;
+    IBOutlet UILabel *Image2Box4;
+
+    IBOutlet UILabel *Image3Box1;
+    IBOutlet UILabel *Image3Box2;
+    IBOutlet UILabel *Image3Box3;
+    IBOutlet UILabel *Image3Box4;
+
+    
     NSMutableArray *objectsToFind;
     
     NSMutableArray *object1Squares;
@@ -44,6 +60,21 @@
 @property(strong, nonatomic) UILabel *scoreVarLabel;
 @property(strong, nonatomic) UILabel *livesVarLabel;
 @property(strong, nonatomic) UILabel *timerVarLabel;
+
+@property(strong, nonatomic) UILabel *Image1Box1;
+@property(strong, nonatomic) UILabel *Image1Box2;
+@property(strong, nonatomic) UILabel *Image1Box3;
+@property(strong, nonatomic) UILabel *Image1Box4;
+
+@property(strong, nonatomic) UILabel *Image2Box1;
+@property(strong, nonatomic) UILabel *Image2Box2;
+@property(strong, nonatomic) UILabel *Image2Box3;
+@property(strong, nonatomic) UILabel *Image2Box4;
+
+@property(strong, nonatomic) UILabel *Image3Box1;
+@property(strong, nonatomic) UILabel *Image3Box2;
+@property(strong, nonatomic) UILabel *Image3Box3;
+@property(strong, nonatomic) UILabel *Image3Box4;
 
 @property(strong, nonatomic) NSMutableArray *object1Squares;
 @property(strong, nonatomic) NSMutableArray *object2Squares;
